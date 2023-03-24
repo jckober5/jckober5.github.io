@@ -1,0 +1,118 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f5f5f5;
+    width: 100%;
+    max-width:1600;
+    min-width: 480;
+    overflow-x : hidden;
+    /*margin-left: 400px;
+    margin-right: 500px;
+    */
+}
+.topSection{
+    background-color: #131921;
+    color: #f5f5f5;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+    height: 180px;
+    overflow: hidden;
+}
+.topSectionWords{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.pic {
+    border-radius: 100px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 40px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.navigation {
+    background-color: #232f3e;
+    color: #f5f5f5;
+    width: 200px;
+    height: 40px;
+    border-radius: 0%;
+    border: none;
+    margin-left: -12px;
+    margin-top: 24px;
+}
+.navigation:hover{
+    box-shadow: 0 5px 50px 0 #232f3e inset, 0 5px 50px 0 #232f3e,
+        0 5px 50px 0 #232f3e inset, 0 5px 50px 0 #232f3e;
+}
+.styledTable {
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.tableHead {
+    background-color: #232f3e;
+    color: #f5f5f5;
+    text-align: center;
+}
+.tableElements {
+    height: 100px;
+    text-align: center;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.firstBox{
+    background:#dddddd;
+    border-radius: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.floatingImages{
+    float: right;
+}
+.logo{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    margin: 5px;
+    border-radius: 10%;
+    float: right;
+}
+.secondBox{
+    background:#dddddd;
+    border-radius: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.group{
+    margin-left: 50px;
+}
+.item{
+    margin-left: 75px;
+}
+.bottomSection{
+    background-color: #232f3e;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+    height: 240px;
+    overflow: hidden;
+}
+.bottomSectionWords{
+    margin-left: 1%;
+    height: 35px;
+}
+.bottomNavigation:hover{
+    color: #000000;
+}
+.bottomNavigation {
+    background-color: #232f3e;
+    color: #f5f5f5;
+    border: none;
+    width: 150px;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
