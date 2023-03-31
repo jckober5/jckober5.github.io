@@ -12,6 +12,7 @@ vgsales=read.csv(file.choose(),header=T,stringsAsFactors = F)
 #Filter to see just games published by nintendo
 nintendo = subset(vgsales,Publisher == 'Nintendo')
 nintendo$Year = as.numeric(nintendo$Year)
+
 #Plot the Top 10 Selling games
 top = 10
 top_games = aggregate(Global_Sales ~ Name, data = nintendo, sum) #aggregate total sales per game
