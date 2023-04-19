@@ -12,81 +12,82 @@
 
 </head>
 <body>
-    <span>
-        <h2 class = "navigation">
-            <b>
-                <a href="https://www.linkedin.com/in/joshua-kober-778134117/"><button class="navigation">Linkedin</button></a>
-                <a href="https://public.tableau.com/app/profile/joshua.kober"><button class="navigation">Tableau Public</button></a>
-                <a href="https://www.koberstudio.com"><button class="navigation">Portfolio</button></a>
-                <a href="https://www.koberstudio.com/resume"><button class="navigation">Resume</button></a>
-                <a href="mailto::josh@koberstudio.com"><button class="navigation">Email</button></a>
-            </b>
+    <div class="topSection">
+        <h1 class="topSectionWords"><b> Joshua Kober - josh@koberstudio.com</b></h1>
+        <h3 class="topSectionWords"><em>Data Analyst - Tableau Developer - BI Consultant</em></h3> 
+        <h2 class="topSectionWordsNav">
+            <a href="https://www.linkedin.com/in/joshua-kober-778134117/"><button class="navigation">Linkedin</button></a>
+            <a href="https://public.tableau.com/app/profile/joshua.kober"><button class="navigation">Tableau Public</button></a>
+            <a href="https://www.koberstudio.com"><button class="navigation">Portfolio</button></a>
+            <a href="https://www.koberstudio.com/resume"><button class="navigation">Resume</button></a>
+            <a href="mailto::josh@koberstudio.com"><button class="navigation">Email</button></a>
         </h2>
-        <h1 class="title"></h1>  
-    </span>
-    <div class="slider">
-        <div class="slides">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-            <input type="radio" name="radio-btn" id="radio5">
-            <div class="slide first">
-                <img src="ironviz.jpeg" alt="">
-            </div>
-            <div class="slide">
-                <img src="byu.jpeg" alt="">
-            </div>
-            <div class="slide">
-                <img src="horse.jpg" alt="">
-            </div>
-            <div class="slide">
-                <img src="family.jpeg" alt="">
-            </div>
-            <div class="slide">
-                <img src="couple.jpg" alt="">
-            </div> 
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-                <div class="auto-btn5"></div>
-            </div>
-        </div>
-        <div class="navigation-manual">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
-            <label for="radio5" class="manual-btn"></label>
-        </div>
     </div>
-    <script type="text/javascript">
-        var counter = 1;
-        setInterval(function(){
-            document.getElementById('radio' + counter).checked = true;
-            counter++;
-            if(counter > 5){
-                counter = 1;
-            }
-        }, 5000);
-    </script>
-    <div>
-        <p class="text">
-            My name is Joshua Kober a Data Analyst with Penn Foster Group, an organization that provides accredited online community college education.  I am an individual
-            with a passion for learning.   I graduated from Southern New Hampshire University with a Masters Degree in Data Analytics in 2017 and have since been helping organizations 
-            understand and visualize their data effectively.  I have always had the heart to serve and in this role I have done just that. 
-        </p>
-        <p class="text">
-            I have experience in languages such as SQL, R, and Python.  I also have used and managed visualization softwares/tools such as Excel, Power BI, and Tableau.  
-            More recently I have been a Tableau Administrator handling user creation and permissions for both inside and outside the organization.
-            I've always been one that has pursued learning new skills that can help those around me. 
-        </p>
-        <p class="text">
-            Outside of work and study I like to spend my time with my family.  As a family we love to go up the Mountains here in Utah and see the beautiful area around us.  
-            When I'm not with my family I like to spend time either playing tennis, basketball, or relaxing outside.  
-        </p>
+    <div class = "container">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <div class="slide first">
+                    <img src="ironviz.jpeg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="byu.jpeg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="horse.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="family.jpeg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="couple.jpg" alt="">
+                </div> 
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                </div>
+            </div>
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var counter = 1;
+            setInterval(function(){
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if(counter > 5){
+                    counter = 1;
+                }
+            }, 5000);
+        </script>
+        <div>
+            <p class="text">
+                My name is Joshua Kober a Data Analyst with Penn Foster Group, an organization that provides accredited online community college education.  I am an individual
+                with a passion for learning.   I graduated from Southern New Hampshire University with a Masters Degree in Data Analytics in 2017 and have since been helping organizations 
+                understand and visualize their data effectively.  I have always had the heart to serve and in this role I have done just that. 
+            </p>
+            <p class="text">
+                I have experience in languages such as SQL, R, and Python.  I also have used and managed visualization softwares/tools such as Excel, Power BI, and Tableau.  
+                More recently I have been a Tableau Administrator handling user creation and permissions for both inside and outside the organization.
+                I've always been one that has pursued learning new skills that can help those around me. 
+            </p>
+            <p class="text">
+                Outside of work and study I like to spend my time with my family.  As a family we love to go up the Mountains here in Utah and see the beautiful area around us.  
+                When I'm not with my family I like to spend time either playing tennis, basketball, or relaxing outside.  
+            </p>
+        </div>
     </div>
 </body>
 </html>
