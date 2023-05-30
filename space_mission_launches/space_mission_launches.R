@@ -29,7 +29,7 @@ library(rpart)
 library(rpart.plot)
 
 # Predict a successful Launch/Mission based on Country, Year, Weekday, Price
-space_tree = rpart(Launch_Successful ~ (Country + Year + Weekday + Price), 
+space_tree = rpart(Launch_Successful ~ (Country + Year + Price), 
                    data = df)
 prp(space_tree,
     space = 4,
