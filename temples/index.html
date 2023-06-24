@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Find a Temple</title>
+
+</script>
+
+<link rel="stylesheet" href="temple.css">
+
+</head>
+<body>
+    <a href="https://koberstudio.com/"><img src="Logo.svg" class="image" alt="Home" style="width: 15%;"></a>
+    <div>
+        <center>
+            <h1 style="font-size: 48px;"><b> Latter Day Saint Temples Across the USA</b></h1>
+            <h3 class="topSectionWords"><em>Joshua Kober - josh@koberstudio.com</em></h3>
+        </center>
+      </div>
+    <div class="row">
+        <div class="column">
+            <a href="https://github.com/jckober5/temples"><img src="github.png" class="image" alt="Github" style="width: 200%;"></a>
+        </div>
+        <div class="column">
+            <a href="https://public.tableau.com/app/profile/joshua.kober6896/viz/LatterDaySaintTemplesAcrosstheUSA/TemplesAcrosstheUSA"><img src="tableau.png" class="image" alt="Tableau" style="width: 200%; margin-left: 200%;"></a>
+        </div>
+    </div>
+    <div class = "container">
+        <div>
+            <p class="text">
+                This project was done to help view the progress of Temples across the United States for the Church of Jesus Christ of Latter Day Saints.  New Temples are announced
+                every six months to be built, so I wanted to create a way to scrape this data from https://churchofjesuschristtemples.org/maps/ to update a visual to show 
+                all those Temples that have been built and will be built.  I wanted to create a process in which this can be be done quickly and easily.  
+            </p>
+            <p class="text">
+                To scrape this data into a csv we utilized a Python script within Jupyter Notebook.  After that we read and stored the data into a MYSQL Database.  This way we have it stored 
+                in two separate locations (Github and MYSQL).     
+            </p>
+            <p class="text">
+                Afterwards, we took the data and created a visualization within Tableau that not only shows you the Temples that are currently announced, but has the functionality to
+                show you all the Temples near your inputted Zip Code.  By inputting you Zip Code and selecting the State, you can visualize statistics on Temples within that area and 
+                view a map of all Temples in the State selected.    
+            </p>
+        </div>
+    </div>
+</body>
+</html>
