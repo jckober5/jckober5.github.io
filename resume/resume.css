@@ -72,7 +72,6 @@ tr:nth-child(even) {
 }
 .firstBox{
     background:#dddddd;
-    border-radius: 0%;
     margin-left: 5%;
     margin-right: 5%;
     opacity: .8;
@@ -89,7 +88,6 @@ tr:nth-child(even) {
 }
 .secondBox{
     background:#dddddd;
-    border-radius: 0%;
     margin-left: 5%;
     margin-right: 5%;
     opacity: .8;
