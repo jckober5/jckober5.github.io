@@ -1,0 +1,50 @@
+---
+title: "Provo Meal Tool"
+author: Joshua Kober - josh@koberstudio.com
+output:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+    self_contained: false
+    thumbnails: false
+    lightbox: false
+    gallery: false
+    highlight: tango
+---
+
+```{r setup, echo=FALSE}
+library(rmdformats)
+```
+
+![](provoMealTool.PNG)
+
+# Summary
+
+Every time my wife and I go on a date it is my job to decide where we should go and eat. This has been a struggle since there are so many places to eat near where we live. I created this tool to help us decide where to eat and to help introduce us to new places as well.
+
+This survey is aimed to gather insights into people's preferences, considerations, and decision-making factors when selecting a dining destination near Provo Utah. By analyzing the responses, we gained valuable information to guide individuals in making informed choices about where to enjoy their meals. We gather data utilizing R on a Shiny application deployed on shinyapps.io. Code for this project is provided in a Github Repository. Insights are then shown on Tableau Public.
+
+In this we consider Cuisine Preferences, Price Range, Atmosphere, and Convenience as we provide recommendations on where to eat. Participants' preferences varied widely, with cuisine options, dietary considerations, price range, ambience, and recommendations all playing a significant role. By understanding these key factors, individuals can make more informed choices when deciding where to eat, ensuring an enjoyable dining experience that aligns with their preferences and requirements.
+
+## Github
+
+[View my Project within GitHub](https://github.com/jckober5/ProvoMealTool)
+
+[![](github.png){width="200"}](https://github.com/jckober5/ProvoMealTool)
+
+I utilize GitHub as a way to collaborate with others to show them personal projects and host static websites to view these projects. Within this repo you can view the tools, assets, and code used in this project. Some of which include but are not limited to R Scripts, Tableau Workbooks, Image Files, Data Files, etc... Please feel free to take a look at projects I have listed and test them out for yourself!
+
+## Shinyapps
+
+[Take the Survey](https://jckober5.shinyapps.io/provoMealTool/)
+
+[![](shiny.png){width="225"}](https://jckober5.shinyapps.io/provoMealTool/)
+
+Shinyapp.io is a cloud based platform utilized to host Shiny applications created within R provided by RStudio. Utilization of this platform make deployment of Shiny application easy to deploy, monitor, and scale as this tool grows and changes. The Survey is built within Shinyapp.io and allows for live reporting and the transfer of data between databases. I invite you to try this survey out to discover the different places there are to eat in the Provo Utah area!
+
+## Tableau
+
+[View the Tableau Dashboard](https://public.tableau.com/app/profile/joshua.kober6896/viz/ProvoMealToolSurvey/ProvoMealToolSurvey?publish=yes)
+
+[![](tableau.png){width="225"}](https://public.tableau.com/app/profile/joshua.kober6896/viz/ProvoMealToolSurvey/ProvoMealToolSurvey?publish=yes)
+
+Tableau Public is a platform created by Tableau for users to share interactive visualizations with a public community. Tableau has been an area where creativity meets data and being able to communicate/present the data in a way that is appealing to others has always been my goal. Here I published a dashboard to show the results of the survey being taken. Please take a look!
