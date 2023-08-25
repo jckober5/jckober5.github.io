@@ -1,0 +1,40 @@
+---
+title: "Koberlytics Applications"
+author: Joshua Kober - josh@koberstudio.com
+output:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+    self_contained: false
+    thumbnails: false
+    lightbox: false
+    gallery: false
+    highlight: tango
+---
+
+```{r setup, echo=FALSE}
+library(rmdformats)
+```
+
+[\<\< Go Back](www.koberstudio.com)
+
+# Summary
+
+This is a panel meant to help with navigation to proper tools launched through the Koberlytics Docker Containers and applications. This includes but is not limited to Docker contained Applications, Custom R Packages, and Data Projects.
+
+## Docker Containers / Applications
+
+![](portainer.png)
+
+Docker containers are a lightweight, portable, and self-sufficient unit of software that packages an application and its dependencies together. They provide a consistent and isolated environment for running applications across different computing environments, such as development, testing, and production, without worrying about compatibility issues or differences in underlying systems. These applications include pre-made images from Docker Hub as well as custom made images. These include Shiny R Applications.
+
+-   [Portainer Login](https://koberlytics.com:9443)
+
+-   [Metabase Login](http://koberlytics.com:3000)
+
+-   [Docker Hub Account](https://hub.docker.com/search?q=jckober5)
+
+## Custom R Packages
+
+![](R.png){width="362"}
+
+R packages are collections of functions, data sets, documentation, and other resources bundled together to provide specific functionality in the R programming language. R is a widely used open-source programming language and environment for statistical computing and graphics. Packages in R extend its capabilities by providing specialized tools and functions for various tasks, such as data analysis, visualization, machine learning, and more. Here we can call R packages to perform complex analysis from anywhere

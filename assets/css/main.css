@@ -3247,7 +3247,7 @@ input, select, textarea {
 			input[type="button"],
 			.button {
 				display: block;
-				width: 100%;
+				width: 75%;
 			}
 
 		/* Box */
