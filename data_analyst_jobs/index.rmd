@@ -1,0 +1,44 @@
+---
+title: "Data Analyst Jobs"
+author: Joshua Kober - josh@koberstudio.com
+output:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+    self_contained: false
+    thumbnails: false
+    lightbox: false
+    gallery: false
+    highlight: tango
+---
+
+```{r setup, echo=FALSE}
+library(rmdformats)
+```
+
+\<\<[Go Back](https://koberstudio.com/)
+
+![](data_analyst_jobs.PNG)
+
+# Summary
+
+I graduated Southern New Hampshire University with a Master's Degree in Data Analytics in 2020. In this analysis I wanted to show all the different types of jobs in the USA that require the skills I gained in my Major. The data I gathered was from 2019 which is the year prior to my graduation. Showing where I would have to look to find the most jobs in my field as well as the top recruiting sites for Data Analysts.
+
+I published this data from www.data.world where they gathered Indeed job posting data from sources such as Jobspikr. This dataset was created by the in house teams from PromptCloud and DataStock.
+
+I was excited to see the different job offerings around the country for someone with my skillsets!
+
+## Github
+
+[View my Project within GitHub](https://github.com/jckober5/data_analyst_jobs)
+
+[![](github.png){width="200"}](https://github.com/jckober5/ProvoMealTool)
+
+I utilize GitHub as a way to collaborate with others to show them personal projects and host static websites to view these projects. Within this repo you can view the tools, assets, and code used in this project. Some of which include but are not limited to R Scripts, Tableau Workbooks, Image Files, Data Files, etc... Please feel free to take a look at projects I have listed and test them out for yourself!
+
+## Tableau
+
+[View the Tableau Dashboard](https://public.tableau.com/app/profile/joshua.kober/viz/DataAnalystJobPostings/DataAnalystJobPostings)
+
+[![](tableau.png){width="225"}](https://public.tableau.com/app/profile/joshua.kober6896/viz/ProvoMealToolSurvey/ProvoMealToolSurvey?publish=yes)
+
+Tableau Public is a platform created by Tableau for users to share interactive visualizations with a public community. Tableau has been an area where creativity meets data and being able to communicate/present the data in a way that is appealing to others has always been my goal. Here I published a dashboard to show the results of the data gathered. Please take a look!
