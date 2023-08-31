@@ -33,9 +33,9 @@ I analyzed this data and found it on Kaggle where we got stock data for sales pe
 
 I utilize GitHub as a way to collaborate with others to show them personal projects and host static websites to view these projects. Within this repo you can view the tools, assets, and code used in this project. Some of which include but are not limited to R Scripts, Tableau Workbooks, Image Files, Data Files, etc... Please feel free to take a look at projects I have listed and test them out for yourself!
 
-## Tableau (Pending)
+## Tableau
 
-[View the Tableau Dashboard](https://public.tableau.com/app/profile/joshua.kober6896/viz/ProvoMealToolSurvey/ProvoMealToolSurvey?publish=yes)
+[View the Tableau Dashboard](https://public.tableau.com/app/profile/joshua.kober6896/viz/NintendoSales_16934514022350/NintendoSales)
 
 [![](tableau.png){width="225"}](https://public.tableau.com/app/profile/joshua.kober6896/viz/ProvoMealToolSurvey/ProvoMealToolSurvey?publish=yes)
 
