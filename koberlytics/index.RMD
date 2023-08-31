@@ -40,3 +40,5 @@ Docker containers are a lightweight, portable, and self-sufficient unit of softw
 ![](R.png){width="362"}
 
 R packages are collections of functions, data sets, documentation, and other resources bundled together to provide specific functionality in the R programming language. R is a widely used open-source programming language and environment for statistical computing and graphics. Packages in R extend its capabilities by providing specialized tools and functions for various tasks, such as data analysis, visualization, machine learning, and more. Here we can call R packages to perform complex analysis from anywhere
+
+-   [Removing Outliers from your Data](https://koberstudio.com/r_package_remove_outliers)

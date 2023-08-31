@@ -8,7 +8,7 @@
         <meta name="author" content="Joshua Kober - josh@koberstudio.com" />
     
     
-    <title>Koberlytics Applications</title>
+    <title>R Package Remove Outliers</title>
 
         <script src="index_files/header-attrs-2.24/header-attrs.js"></script>
         <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -118,11 +118,22 @@
             <ul>
             <li><a href="#summary" id="toc-summary">Summary</a>
             <ul>
-            <li><a href="#docker-containers-applications"
-            id="toc-docker-containers-applications">Docker Containers /
-            Applications</a></li>
-            <li><a href="#custom-r-packages"
-            id="toc-custom-r-packages">Custom R Packages</a></li>
+            <li><a
+            href="#download-on-r-using-devtoolsinstall_githubjckober5r_package_remove_outliersjkoutliers"
+            id="toc-download-on-r-using-devtoolsinstall_githubjckober5r_package_remove_outliersjkoutliers">Download
+            on R using
+            <em>devtools::install_github(“jckober5/R_Package_Remove_Outliers/jkoutliers”)</em></a></li>
+            <li><a href="#how-to-identify-outliers-in-r"
+            id="toc-how-to-identify-outliers-in-r">How to Identify
+            Outliers in R</a></li>
+            <li><a href="#use-the-interquartile-range."
+            id="toc-use-the-interquartile-range.">1. Use the
+            interquartile range.</a></li>
+            <li><a href="#use-z-scores." id="toc-use-z-scores.">2. Use
+            z-scores.</a></li>
+            <li><a href="#github" id="toc-github">Github</a></li>
+            <li><a href="#r-package" id="toc-r-package">R
+            Package</a></li>
             </ul></li>
             </ul>
           </div>
@@ -133,7 +144,7 @@
    
    
         
-      <h1 class="title">Koberlytics Applications</h1>
+      <h1 class="title">R Package Remove Outliers</h1>
       
       <p class="authors">
            <span class="glyphicon glyphicon-user"></span> Joshua Kober -
@@ -147,48 +158,79 @@ class="email">josh@koberstudio.com</a>
    
 <!-- Don't indent these lines or it will mess pre blocks indentation --> 
 <div class="page-content has-page-title">
-<p><a href="https://www.koberstudio.com">&lt;&lt; Go Back</a></p>
+<p>&lt;&lt;<a href="https://.koberstudio.com">Go Back</a></p>
+<p><img src="RSession.PNG" /></p>
 <div id="summary" class="section level1">
 <h1>Summary</h1>
-<p>This is a panel meant to help with navigation to proper tools
-launched through the Koberlytics Docker Containers and applications.
-This includes but is not limited to Docker contained Applications,
-Custom R Packages, and Data Projects.</p>
-<div id="docker-containers-applications" class="section level2">
-<h2>Docker Containers / Applications</h2>
-<p><img src="portainer.png" /></p>
-<p>Docker containers are a lightweight, portable, and self-sufficient
-unit of software that packages an application and its dependencies
-together. They provide a consistent and isolated environment for running
-applications across different computing environments, such as
-development, testing, and production, without worrying about
-compatibility issues or differences in underlying systems. These
-applications include pre-made images from Docker Hub as well as custom
-made images. These include Shiny R Applications.</p>
+<div
+id="download-on-r-using-devtoolsinstall_githubjckober5r_package_remove_outliersjkoutliers"
+class="section level2">
+<h2>Download on R using
+<em>devtools::install_github(“jckober5/R_Package_Remove_Outliers/jkoutliers”)</em></h2>
+<p>R package used to help remove outliers from a data frame. An outlier
+is an observation that lies abnormally far away from other values in a
+dataset. Outliers can be problematic because they can affect the results
+of an analysis.</p>
+<p>This Package helps to identify and remove outliers in R.</p>
+</div>
+<div id="how-to-identify-outliers-in-r" class="section level2">
+<h2>How to Identify Outliers in R</h2>
+<p>Before you can remove outliers, you must first decide on what you
+consider to be an outlier. There are two common ways to do so:</p>
+</div>
+<div id="use-the-interquartile-range." class="section level2">
+<h2>1. Use the interquartile range.</h2>
+<p>The interquartile range (IQR) is the difference between the 75th
+percentile (Q3) and the 25th percentile (Q1) in a dataset. It measures
+the spread of the middle 50% of values.</p>
+<p>You could define an observation to be an outlier if it is 1.5 times
+the interquartile range greater than the third quartile (Q3) or 1.5
+times the interquartile range less than the first quartile (Q1).</p>
+<p>Outliers = Observations &gt; Q3 + 1.5<em>IQR or &lt; Q1 –
+1.5</em>IQR</p>
+</div>
+<div id="use-z-scores." class="section level2">
+<h2>2. Use z-scores.</h2>
+<p>A z-score tells you how many standard deviations a given value is
+from the mean. We use the following formula to calculate a z-score:</p>
+<p>z = (X – μ) / σ</p>
+<p>where:</p>
+<p>X is a single raw data value μ is the population mean σ is the
+population standard deviation You could define an observation to be an
+outlier if it has a z-score less than -3 or greater than 3.</p>
+<p>Outliers = Observations with z-scores &gt; 3 or &lt; -3</p>
+</div>
+<div id="github" class="section level2">
+<h2>Github</h2>
+<p><a href="https://github.com/jckober5/R_Package_Remove_Outliers">View
+my Project within GitHub</a></p>
+<p><a href="https://github.com/jckober5/ProvoMealTool"><img
+src="github.png" width="200" /></a></p>
+<p>I utilize GitHub as a way to collaborate with others to show them
+personal projects and host static websites to view these projects.
+Within this repo you can view the tools, assets, and code used in this
+project. Some of which include but are not limited to R Scripts, Tableau
+Workbooks, Image Files, Data Files, etc… Please feel free to take a look
+at projects I have listed and test them out for yourself!</p>
+</div>
+<div id="r-package" class="section level2">
+<h2>R Package</h2>
+<p><img src="R.png" width="200" /></p>
+<div
+id="download-on-r-using-devtoolsinstall_githubjckober5r_package_remove_outliersjkoutliers-1"
+class="section level4">
+<h4>Download on R using
+<em>devtools::install_github(“jckober5/R_Package_Remove_Outliers/jkoutliers”)</em></h4>
+<p>Once you download this package you can look at the functions
+available using these R commands…</p>
 <ul>
-<li><p><a href="https://koberlytics.com:9443">Portainer
-Login</a></p></li>
-<li><p><a href="http://koberlytics.com:3000">Metabase Login</a></p></li>
-<li><p><a href="http://koberlytics.com:8100">Kanban Login</a></p></li>
-<li><p><a href="https://hub.docker.com/search?q=jckober5">Docker Hub
-Account</a></p></li>
+<li><p>?quantileRemove</p></li>
+<li><p>?minQuantileValue</p></li>
+<li><p>?maxQuantileValue</p></li>
+<li><p>?IQRange</p></li>
+<li><p>?zScoreRemove</p></li>
 </ul>
 </div>
-<div id="custom-r-packages" class="section level2">
-<h2>Custom R Packages</h2>
-<p><img src="R.png" width="362" /></p>
-<p>R packages are collections of functions, data sets, documentation,
-and other resources bundled together to provide specific functionality
-in the R programming language. R is a widely used open-source
-programming language and environment for statistical computing and
-graphics. Packages in R extend its capabilities by providing specialized
-tools and functions for various tasks, such as data analysis,
-visualization, machine learning, and more. Here we can call R packages
-to perform complex analysis from anywhere</p>
-<ul>
-<li><a href="https://koberstudio.com/r_package_remove_outliers">Removing
-Outliers from your Data</a></li>
-</ul>
 </div>
 </div>
 </div>
