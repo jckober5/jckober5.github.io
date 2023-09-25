@@ -18,6 +18,8 @@ output:
 
 [\<\< Go Back](https://koberstudio.com)
 
+![](divide_music.PNG)
+
 # Summary
 
 Over the past years I have became a huge fan of the artist Divide Music and the music he releases. Some of my favorite songs include [*Drag Me Under*](https://www.youtube.com/watch?v=tnWErAV1Mgs), [*Stand Tall*](https://www.youtube.com/watch?v=urkjKjHrwRs), and [*By My Side*](https://www.youtube.com/watch?v=vsI2248ULi0). I love how he incorporates the feeling and emotion from the movie/show into his song that he backdrops to his created music video on Youtube. I know his channel has been growing over the last years but I wanted to do this project to find out just how much it has been growing.
@@ -212,7 +214,7 @@ I utilize GitHub as a way to collaborate with others to show them personal proje
 
 ## Tableau
 
-[View the Tableau Dashboard](https://public.tableau.com/app/profile/joshua.kober6896)
+[View the Tableau Dashboard](https://public.tableau.com/app/profile/joshua.kober6896/viz/DivideMusic/DivideMusic)
 
 ![](tableau.png){width="225"}
 
