@@ -7,8 +7,7 @@
 
 ## Data Analysis Projects
 * [Data Analyst Job Postings](https://koberstudio.com/data_analyst_jobs/)
-* [Nintendo Sales](https://koberstudio.com/nintendo_sales/)
-* [California Births](https://koberstudio.com/california_births/)
+* [Divide Music](https://koberstudio.com/divide_music/)
 * [Temples Built Across the USA](https://koberstudio.com/temples/)
 * [Provo Meal Tool](https://koberstudio.com/provo_meal_tool/)
 
