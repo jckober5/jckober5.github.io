@@ -13,32 +13,253 @@ output:
 
 ```{r setup, echo=FALSE}
 library(rmdformats)
+
 ```
 
-\<\<[Go Back](https://koberstudio.com/)
-
-![](data_analyst_jobs.PNG)
+[\<\<Go Back](https://koberstudio.com)
 
 # Summary
 
-I graduated Southern New Hampshire University with a Master's Degree in Data Analytics in 2020. In this analysis I wanted to show all the different types of jobs in the USA that require the skills I gained in my Major. The data I gathered was from 2019 which is the year prior to my graduation. Showing where I would have to look to find the most jobs in my field as well as the top recruiting sites for Data Analysts.
+![](data_analyst_jobs.PNG)
 
-I published this data from www.data.world where they gathered Indeed job posting data from sources such as Jobspikr. This dataset was created by the in house teams from PromptCloud and DataStock.
+After graduating Brigham Young University in 2017 with a degree in Statisitics I have pursued a career in Data Analytics. In 2020 to continue my pursuit, I graduated from Southern New Hampshire University with a degree in Data Analysis. I've worked in several smaller companies performing data analysis tasks and have moved into a career now where I feel comfortable and knowledgeable in this field.
 
-I was excited to see the different job offerings around the country for someone with my skillsets!
+As I look to my future and what my goals are for the future I've been tasked with the question on what do I need to build upon to grow in my career. One example is what do I need to accomplish to become a Senior in my field.
+
+The primary objective of this project I've done is to evaluate the distinct skill sets and experiences that differentiate a Senior Data Analyst from a Data Analyst. By examining various facets such as technical proficiencies and experience levels, I aim to construct a unique view of the skill and experience needed towards seniority in data analysis roles.
+
+With this project I have gathered Data Analyst job postings from Google using SerpAPI and Python. After that I've been able to model and format the data within a view in SQL so that it can be easily read and used within Tableau. Here I want to perform a simple, but powerful analysis on the following...
+
+-   What programming language is in larger demand? (R vs Python vs SQL)
+
+-   What BI platform is in larger demand? (Tableau vs Power BI vs Looker)
+
+-   What are the qualifications to be hired as a Senior Data Analyst?
+
+    -   Years of Experience
+
+    -   Education Level
+
+    -   Required Skills
+
+The project aims to provide a robust comparative analysis of the skills and experiences necessary for transitioning from a Data Analyst to a Senior Data Analyst. The outcomes will serve as a valuable guide for aspiring data professionals, like myself, seeking to structure career development paths in the realm of data analysis. Ultimately, this project will contribute to a better understanding of the evolving career path for Data Analysis and the critical factors that underpin career progression in this dynamic field.
+
+# Analysis
+
+## R vs Python vs SQL
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+### Read in the Necessary Packages
+library(RMySQL)
+library(ggplot2)
+library(plotly)
+library(scales)
+options(scipen=999)
+
+### Bring in the Data Successfully
+mysqlconnection <- dbConnect(RMySQL::MySQL(),
+                            dbname='external_data',
+                            host='23.239.4.168',
+                            port=3306,
+                            user='jkober',
+                            password='4N4CrFHevPzpdt!')
+
+df <- dbReadTable(mysqlconnection, 'vw_google_job_data_skills')
+
+#create percentage of demand
+df$Percentage_Requested <- round(df$requests/df$postings,2)
+
+#filter to only R, Python, and SQL
+lang <- subset(df,df$skill == 'R' 
+               | df$skill == 'Python'
+               | df$skill == 'SQL')
+
+ggplotly(ggplot(data = lang, aes(x = skill, y = Percentage_Requested), fill = 'gold') +
+                        geom_bar(stat = "identity", color = "#000000", fill = 'gold', alpha = .4, width = .75, show.legend = FALSE) +
+                        coord_flip() + 
+  theme(panel.background = element_rect(fill = "#202123"),
+    plot.background = element_rect(fill = "#202123"),
+    title = element_text(colour = '#ffffff')) +
+  ggtitle("Percentage of Job Postings Requesting Coding Skills")
+)
+```
+
+In the competitive field of data analysis, possessing a robust skill set in SQL, R, and Python significantly enhances job prospects. SQL proficiency is considered a foundational requirement, with half of the job postings emphasizing its importance. Python, with its broad applications and extensive library support, is a highly sought-after skill, demanded in more than a quarter of the analyzed postings. R, though less frequently requested, remains vital for specific roles emphasizing statistical analysis and visualization.
+
+As I went to school for Statistics and Data Analysis there was a huge emphasis on an academic side to learn and utilize R over Python. With this comparison though we can see, due to it's versatility, Python is leading over R as a language recruiters are asking of future analysts.
+
+Prospective Data Analysts should consider honing their skills in all three languages to broaden their opportunities and cater to a variety of job requirements. Continuous learning and adaptability to evolving technologies are key factors to stay ahead in the competitive job market for data analysis roles.
+
+## Tableau vs Power BI vs Looker
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+
+#filter to only Tableau, Power BI, Looker
+viz <- subset(df,df$skill == 'Tableau' 
+               | df$skill == 'Power BI'
+               | df$skill == 'Looker')
+
+ggplotly(ggplot(data = viz, aes(x = skill, y = Percentage_Requested), fill = 'gold') +
+                        geom_bar(stat = "identity", color = "#000000", fill = 'gold', alpha = .4, width = .75, show.legend = FALSE) +
+                        coord_flip() + 
+  theme(panel.background = element_rect(fill = "#202123"),
+    plot.background = element_rect(fill = "#202123"),
+    title = element_text(colour = '#ffffff')) +
+  ggtitle("Percentage of Job Postings Requesting Visualization Skills")
+)
+```
+
+The significance of Business Intelligence platforms in the data analysis profession is evident, with a notable portion of job postings emphasizing proficiency in Tableau, Power BI, and Looker. Tableau, as the most in-demand platform among the three, underscores its importance in data visualization, aiding effective storytelling with data and stronger visualization potential. Power BI follows closely, being an essential tool for Data Analysts, especially within organizations utilizing Microsoft's ecosystem and on a lower budget. The presence of Looker, though relatively lower, signifies a growing interest in cloud-based analytics and its role in data exploration.
+
+Aspiring Data Analysts should consider acquiring proficiency in these BI platforms to enhance their employability and contribute effectively to data-driven decision-making within organizations and stakeholders. Continuous learning and staying updated with the latest features and advancements in these platforms are vital for a successful career in the evolving landscape of data analysis.
+
+## Senior Position Requirements
+
+### Education Requirements
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+
+
+postings <- dbReadTable(mysqlconnection, 'vw_google_job_data')
+senior_postings <- subset(postings,postings$senior_position == 1)
+
+degree_required <- data.frame(Education_Level = ifelse
+                                (senior_postings$master_degree_required == 1,
+                                'Master Degree',ifelse
+                                  (senior_postings$bachelor_degree_required == 1, 
+                                  'Bachelor Degree', "Degree not Specified"
+                                  )
+                                )
+                              , Postings = rep(1, nrow(senior_postings))
+                              )
+degree_required <- aggregate(Postings ~ Education_Level, data = degree_required, 
+                             sum)
+colors <- c('rgb(90,117,98)', 'rgb(123,145,129)', 'rgb(75,92,107)', 'rgb(224,164,156)', 'rgb(235,194,189)', 'rgb(251,244,232)',
+            'rgb(216,215,215)',
+            'rgb(131,181,108)',
+            'rgb(156,196,137)',
+            'rgb(181,211,167)',
+            'rgb(205,225,196)',
+            'rgb(230,240,226)')
+
+degree.pie <- plot_ly(degree_required, labels = ~Education_Level, values = 
+                        ~Postings, type = 'pie',
+        textposition = 'inside',
+        textinfo = 'label+percent',
+        #insidetextfont = list(color = '#FFFFFF'),
+        hoverinfo = 'text',
+        text = ~paste(Education_Level, 'Postings'),
+        marker = list(colors = colors,
+                      line = list(color = '#FFFFFF', width = 1)),
+                      #The 'pull' attribute can also be used to create space between the sectors
+        showlegend = FALSE)
+degree.pie <- degree.pie %>% layout(title = 'Distribution of Education Levels Required for a Senior Position',
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE)) %>%
+         layout(plot_bgcolor='transparent') %>% 
+         layout(paper_bgcolor='transparent')
+
+degree.pie
+```
+
+The demand for higher education in the field of data analysis, specifically for Senior Data Analyst roles, is notable. Approximately half of the Senior Data Analyst job postings stress the need for a Master's degree, highlighting the industry's inclination towards candidates with advanced education and a strong analytical foundation. Meanwhile, a quarter of the postings emphasize the significance of a Bachelor's degree, illustrating the enduring importance of foundational knowledge and skills in the data analysis profession.
+
+As an aspiring Senior Data Analyst, I should recognize the value placed on education in this field and am glad I pursued a higher degree to enhance my professional opportunities. Moreover, continuous learning and staying updated with the latest advancements in skills and technologies are vital for a successful career progression, aligning with the evolving demands of the industry.
+
+### Years of Experience Requirements
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+
+exp_required <- data.frame(Experience_Years = senior_postings$years_of_experience 
+                          , Postings = rep(1, nrow(senior_postings))
+                          )
+exp_required <- aggregate(Postings ~ Experience_Years, data = exp_required, 
+                             sum)
+
+exp.pie <- plot_ly(exp_required, labels = ~Experience_Years, values = 
+                        ~Postings, type = 'pie',
+        textposition = 'inside',
+        textinfo = 'label+percent',
+        #insidetextfont = list(color = '#FFFFFF'),
+        hoverinfo = 'text',
+        text = ~paste(Experience_Years, 'Years of Experience'),
+        marker = list(colors = colors,
+                      line = list(color = '#FFFFFF', width = 1)),
+                      #The 'pull' attribute can also be used to create space between the sectors
+        showlegend = FALSE)
+exp.pie <- exp.pie %>% layout(title = 'Distribution of Years of Experience Required for a Senior Position',
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE)) %>%
+         layout(plot_bgcolor='transparent') %>% 
+         layout(paper_bgcolor='transparent')
+
+exp.pie
+```
+
+A vast majority of job postings highlighting the necessity of a professional background exist for Senior Data Analysts. Specifically, 70% of the postings indicate a requirement for 4 to 5 years of prior experience in the data analysis field prior to consideration for the role. This can also be headed by a specific domain knowledge required for those 4-5 years. This underlines the industry's emphasis on hands-on experience, domain expertise, and a proven track record of successfully tackling analytical challenges.
+
+For aspiring Senior Data Analysts, the key takeaway is the critical importance of gaining substantial experience in the data analysis domain. Early-career professionals should proactively seek opportunities to accumulate relevant experience, engage in challenging projects, and continuously enhance their analytical skills to meet the stringent experience requirements of senior roles. Additionally, staying abreast of industry trends and advancements is crucial for building a successful career path in the dynamic field of data analysis.
+
+I have currently been working in the data analysis field since 2017, but have only recently in the last couple years changed my domain expertise towards education. As I build up my domain knowledge I hope to anchor a position within my natural career advancement.
+
+### Skill Requirements
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+
+
+r <-aggregate(r ~ senior_position, data = senior_postings, sum)
+python <- aggregate(python ~ senior_position, data = senior_postings, sum)
+sql <-aggregate(sql_skills ~ senior_position, data = senior_postings, sum)
+tableau <-aggregate(tableau ~ senior_position, data = senior_postings, sum)
+power_bi <- aggregate(power_bi ~ senior_position, data = senior_postings, sum)
+looker <- aggregate(looker ~ senior_position, data = senior_postings, sum)
+
+senior_skills <- data.frame(Skills = c('R','Python','SQL','Tableau','Power BI', 'Looker')
+                            , Postings = c(r$r[1],python$python[1],sql$sql_skills[1],tableau$tableau[1],power_bi$power_bi[1],looker$looker[1])
+                            , Total_Postings = rep(nrow(senior_postings),6)
+                          )
+senior_skills$Percentage_Requested <- round(senior_skills$Postings/senior_skills$Total_Postings,2)
+
+ggplotly(ggplot(data = senior_skills, aes(x = Skills, y = Percentage_Requested), fill = 'gold') +
+                        geom_bar(stat = "identity", color = "#000000", fill = 'gold', alpha = .4, width = .75, show.legend = FALSE) +
+                        coord_flip() + 
+  theme(panel.background = element_rect(fill = "#202123"),
+    plot.background = element_rect(fill = "#202123"),
+    title = element_text(colour = '#ffffff')) +
+  ggtitle("Percentage of Senior Job Postings Requesting Skills")
+)
+```
+
+Skill requirements for the role of a Senior Data Analyst are comprehensive and essential, encompassing expertise in SQL, Tableau, Python, and many other technologies. SQL proficiency stands out with an overwhelmingly high demand, reinforcing its foundational role in data analysis. Tableau and Power BI, have been prominent tools for data visualization, is a crucial skill for effectively communicating insights to stakeholders. Additionally, Python, known for its versatility, finds substantial demand, emphasizing the need for proficiency in data manipulation and analysis.
+
+Prospective Senior Data Analysts should prioritize honing their skills in those tools that seem to be gaining traction to meet the industry's skill demands. Continuous learning, staying updated with the latest advancements, and adaptability to evolving technologies are critical for success in the dynamic field of data analysis at the senior level.
+
+## Conclusion
+
+A detailed analysis of job postings has shed light on the critical skills and tools sought by employers. The findings from the exploration of job postings focusing on proficiency in SQL, R, Python, and Business Intelligence (BI) platforms such as Tableau, Power BI, and Looker are crucial for aspiring and existing Data Analysts.
+
+I have found that the leading technologies for data analysts to become proficient in are SQL which is vital, Python over R due to it's versatility, and Tableau or Power BI which can vary depending on what company you are applying to.
+
+The journey to becoming a Senior Data Analyst demands a nuanced understanding of the skills, experiences, and qualifications that employers prioritize in this role. Our exploration into Senior Data Analyst job postings has unearthed crucial insights regarding skill requirements, educational backgrounds, and prior experience needed to excel in this position. With this knowledge I can better prepare myself to grow into this position by doing the following...
+
+-   Gaining more years of experience in my domain of Education
+
+-   Building up my skills within popular and upcoming tools such as SQL, Python, Tableau, and Power BI
+
+# Tools
 
 ## Github
 
 [View my Project within GitHub](https://github.com/jckober5/data_analyst_jobs)
 
-[![](github.png){width="200"}](https://github.com/jckober5/ProvoMealTool)
+![](github.png){width="200"}
 
 I utilize GitHub as a way to collaborate with others to show them personal projects and host static websites to view these projects. Within this repo you can view the tools, assets, and code used in this project. Some of which include but are not limited to R Scripts, Tableau Workbooks, Image Files, Data Files, etc... Please feel free to take a look at projects I have listed and test them out for yourself!
 
 ## Tableau
 
-[View the Tableau Dashboard](https://public.tableau.com/app/profile/joshua.kober/viz/DataAnalystJobPostings/DataAnalystJobPostings)
+[View the Tableau Dashboard](https://public.tableau.com/app/profile/joshua.kober6896/viz/DataAnalystJobsGoogleJobPostings/DataAnalystJobs)
 
-[![](tableau.png){width="225"}](https://public.tableau.com/app/profile/joshua.kober6896/viz/ProvoMealToolSurvey/ProvoMealToolSurvey?publish=yes)
+![](tableau.png){width="225"}
 
-Tableau Public is a platform created by Tableau for users to share interactive visualizations with a public community. Tableau has been an area where creativity meets data and being able to communicate/present the data in a way that is appealing to others has always been my goal. Here I published a dashboard to show the results of the data gathered. Please take a look!
+Tableau Public is a platform created by Tableau for users to share interactive visualizations with a public community. Tableau has been an area where creativity meets data and being able to communicate/present the data in a way that is appealing to others has always been my goal. Here I published a dashboard to show the results of the survey being taken. Please take a look!
