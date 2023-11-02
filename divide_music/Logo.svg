@@ -92,7 +92,8 @@
          id="stop983" /></linearGradient></defs><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"><rect
+     id="layer1"
+     transform="matrix(0.83333334,0,0,0.83333334,25,25)"><rect
        style="display:none;fill:url(#linearGradient8424);fill-opacity:1;stroke-width:0"
        id="rect789"
        width="1600"
