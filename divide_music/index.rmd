@@ -38,6 +38,14 @@ To collect and clean the data I utilize Python and the Google API to pull data f
 
 Visualizing this data is done utilizing R on this website and on Tableau. In these visualizations we try to answer the questions mentioned above by performing Descriptive, Diagnostic, Predictive, and Prescriptive analysis. This way we can describe what has happened, why it happened, what might happen in the future, and what possible courses they should take.
 
+# Discover New Music
+
+[Take my Survey](https://jckober5.shinyapps.io/divide_music/)
+
+![](shiny.png){width="250"}
+
+Within Shinyapps, I have harnessed the power of interactive technology to craft a survey that aims to introduce you to the amazing world of Divide Music. This survey is designed to delve into your unique musical tastes, allowing me to recommend videos that resonate with you. With Divide Music's extensive catalog, this approach ensures a variety of suggestions to ensure that you'll uncover hidden gems and musical treasures that align perfectly with your preferences. Whether you have heard of Divide Music or just beginning your journey, mysurvey is your gateway to a harmonious discovery of the music that truly speaks to you.
+
 # Predictive Analysis
 
 Here we want to predict the number of views and likes the [Divide Music Youtube Channel](https://www.youtube.com/@DivideMusic) will get on their next video which they typically publish every 2 weeks. By doing this we will run a simple linear regression on how the life of the channel affects the number of views or likes they can expect per day.
@@ -57,14 +65,20 @@ library(jkoutliers)
 options(scipen=999)
 
 ### Bring in the Data Successfully
-mysqlconnection <- dbConnect(RMySQL::MySQL(),
-                            dbname='external_data',
-                            host='23.239.4.168',
-                            port=3306,
-                            user='jkober',
-                            password='4N4CrFHevPzpdt!')
+#mysqlconnection <- dbConnect(RMySQL::MySQL(),
+                            #dbname='external_data',
+                            #host='23.239.4.168',
+                            #port=3306,
+                            #user='jkober',
+                            #password='4N4CrFHevPzpdt!')
+con <- DBI::dbConnect(RMySQL::MySQL(),
+                        host = "23.239.4.168",
+                        port = 3306,
+                        user = "jkober",
+                        password = "4N4CrFHevPzpdt!"
+)
+df <- DBI::dbGetQuery(con, "select * from external_data.vw_divide_music")
 
-df <- dbReadTable(mysqlconnection, 'divide_music')
 
 ### Perform Exploratory Analysis on potential Relationships on Views
   # How many views can you expect on average per day based on the life of the channel at the time
@@ -202,15 +216,7 @@ Here we were able to predict the number of views and likes the Divide Music Yout
 
 This variable proved significant in both models and the model had mid to high level fit within out data's variability. I am so excited to have utilized this data to show how much this channel has grown over the years. Their content has improved drastically and I look forward to their videos almost every 2 weeks. I invite you to check out their content as well on [Youtube](https://www.youtube.com/@DivideMusic).
 
-# Tools
-
-## Github
-
-[View my Project within GitHub](https://github.com/jckober5/divide_music)
-
-![](github.png){width="200"}
-
-I utilize GitHub as a way to collaborate with others to show them personal projects and host static websites to view these projects. Within this repo you can view the tools, assets, and code used in this project. Some of which include but are not limited to R Scripts, Tableau Workbooks, Image Files, Data Files, etc... Please feel free to take a look at projects I have listed and test them out for yourself!
+# Explore Divide Music Visually
 
 ## Tableau
 
@@ -219,3 +225,13 @@ I utilize GitHub as a way to collaborate with others to show them personal proje
 ![](tableau.png){width="225"}
 
 Tableau Public is a platform created by Tableau for users to share interactive visualizations with a public community. Tableau has been an area where creativity meets data and being able to communicate/present the data in a way that is appealing to others has always been my goal. Here I published a dashboard as a tool to help others find specific information pertinent to this project. Please take a look!
+
+# Project Repo
+
+## Github
+
+[View my Project within GitHub](https://github.com/jckober5/divide_music)
+
+![](github.png){width="200"}
+
+I utilize GitHub as a way to collaborate with others to show them personal projects and host static websites to view these projects. Within this repo you can view the tools, assets, and code used in this project. Some of which include but are not limited to R Scripts, Tableau Workbooks, Image Files, Data Files, etc... Please feel free to take a look at projects I have listed and test them out for yourself!
