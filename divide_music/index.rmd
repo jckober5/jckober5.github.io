@@ -228,7 +228,7 @@ Tableau Public is a platform created by Tableau for users to share interactive v
 
 ## Metabase
 
-[View the Metabase Dashboard](https://koberstudio.com/divide_music/metabase_youtube_channel/)
+[View the Metabase Dashboard](http://kobernetwork.com:3000/public/dashboard/44df7a12-d3b7-4179-acc8-513aba47cfaf)
 
 ![](metabase.png){width="225"}
 
