@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+    $(function(){
+        //animations for resume 
+        $("body").toggle(1).fadeIn(5000);
+        $(".logo").slideUp(1).toggle(5000)
+
+        //show and hide sections
+
+    });
+</script>
+
+<link rel="stylesheet" href="metabase.css">
+
+</head>
+<body>
+    <div class="topSection">
+        <h1 id="media" class="topSectionWords">
+            <img class="pic" src="profile.jpg" alt="Profile Pic" width="140"><b> Joshua Kober - josh@koberstudio.com</b>
+        </h1>
+        <h3 class="topSectionWords"><em>Data Analyst - Tableau Developer - BI Consultant</em></h3> 
+        <h2 class="topSectionWordsNav">
+            <a href="https://www.linkedin.com/in/joshua-kober-778134117/"><button class="navigation">Linkedin</button></a>
+            <a href="https://public.tableau.com/app/profile/joshua.kober6896"><button class="navigation">Tableau Public</button></a>
+            <a href="https://github.com/jckober5"><button class="navigation">Github</button></a>
+            <a href="https://www.koberstudio.com"><button class="navigation">Portfolio</button></a>
+            <a href="https://www.koberstudio.com/resume"><button class="navigation">Resume</button></a>
+            <a href="mailto::josh@koberstudio.com"><button class="navigation">Email</button></a>
+        </h2>
+    </div>
+    <div class="tableElements">
+        <table class="styledTable">
+        </table>
+    </div>
+    <div class="firstBox">
+        <h2 class="section"><u>Monitor Divide Music Using Metabase</u></h2>
+            <iframe
+                src="http://kobernetwork.com:3000/public/dashboard/44df7a12-d3b7-4179-acc8-513aba47cfaf"
+                frameborder="0"
+                width="1700"
+                height="1200"
+                allowtransparency
+            ></iframe>
+            <a href="https://www.koberstudio.com/"><p style="font-size: 10px;"><i>***Back to my Portfolio</i></p></a>
+    </div>
+    
+    <div class="bottomSection">
+        <h2 class="bottomSectionWords">
+            <a href="https://www.linkedin.com/in/joshua-kober-778134117/"><button class="bottomNavigation">Linkedin</button></a>
+            <a href="https://public.tableau.com/app/profile/joshua.kober6896"><button class="bottomNavigation">Tableau Public</button></a>
+            <a href="https://www.koberstudio.com"><button class="bottomNavigation">Portfolio</button></a>
+            <a href="https://github.com/jckober5"><button class="bottomNavigation">GitHub</button></a>
+            <a href="https://hub.docker.com/search?q=jckober5"><button class="bottomNavigation">Docker Hub</button></a>
+        </h2>
+        <h2 class="bottomSectionWords">
+            <a href="https://www.koberstudio.com/about-me"><button class="bottomNavigation">About Me</button></a>
+            <a href="mailto:josh@koberstudio.com"><button class="bottomNavigation">Contact Me</button></a>
+        </h2>
+    </div>  
+</body>
+</html>

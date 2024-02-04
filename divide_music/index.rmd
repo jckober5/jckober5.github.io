@@ -226,6 +226,14 @@ This variable proved significant in both models and the model had mid to high le
 
 Tableau Public is a platform created by Tableau for users to share interactive visualizations with a public community. Tableau has been an area where creativity meets data and being able to communicate/present the data in a way that is appealing to others has always been my goal. Here I published a dashboard as a tool to help others find specific information pertinent to this project. Please take a look!
 
+## Metabase
+
+[View the Metabase Dashboard](https://koberstudio.com/divide_music/metabase_youtube_channel/)
+
+![](metabase.png){width="225"}
+
+Metabase is an open-source business intelligence and data visualization tool that allows users to easily create interactive dashboards and analyze data without the need for extensive technical expertise. It provides a user-friendly interface for querying databases, exploring datasets, and generating visualizations such as charts and graphs. Metabase supports various data sources, including SQL databases, NoSQL databases, and cloud-based data warehouses. Its goal is to democratize data access within organizations, enabling non-technical users to make informed decisions based on data insights. Metabase is designed to be easy to install, configure, and use, making it a popular choice for organizations seeking a simple yet powerful business intelligence solution.
+
 # Project Repo
 
 ## Github
