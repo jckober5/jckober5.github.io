@@ -1,0 +1,169 @@
+---
+title: "📑 Resume"
+author: "Joshua Kober - josh@koberstudio.com"
+output:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+    self_contained: false
+    thumbnails: false
+    lightbox: false
+    gallery: false
+    highlight: tango
+---
+
+```{r setup, echo=FALSE}
+ library(rmdformats)
+```
+
+![](images/personal.png){width="154"}
+
+|                                                                 |                                           |                                       |                                                  |                                            |
+|:-------------:|:-------------:|:-------------:|:-------------:|:-----------:|
+| [Linkedin](https://www.linkedin.com/in/joshua-kober-778134117/) | [Portfolio](https://www.koberstudio.com/) | [Github](https://github.com/jckober5) | [About Me](https://www.koberstudio.com/about-me) | [Contact Me](mailto::josh@koberstudio.com) |
+
+# Skills
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(DT)
+
+df = data.frame(
+  Category = c('ETL / ELT Processing'
+               ,'Programming'
+               ,'Business Intelligence & Data Visualization '
+               ,'App Development Tools'
+               ,'Cloud Technologies'
+               ,'Project / Code Management'
+               ,'Statistical Methods'
+               ,'Design Tools'
+               ,'Marketing Platform Management')
+  , Skills = c('Airflow - Airbyte'
+               ,'SQL - Python - R - HTML/CSS - Excel'
+               ,'Tableau - Power BI - Metabase - Superset'
+               ,'Budibase - Appsmith - Windmill - Shinyapps'
+               ,'AWS - Linode - Snowflake - Databricks - Cloudflare'
+               ,'Jira - Confluence - Monday - Bitbucket - Github - Gitea'
+               ,'A/B Testing - Survey Research - Regression - Decision Trees / Random Forests'
+               ,'Canva - Photoshop - Inkscape - Gimp - Mobirise'
+               ,'Email - Facebook/Instagram - Linkedin')
+)
+
+DT::datatable(df, rownames = FALSE, editable = 'cell')
+```
+
+# Job Experience
+
+## United Energy Workers Healthcare {style="background-color: #454545; border-radius: 20px; padding-top: -10px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"}
+
+[![UEW Health](UEW.png){width="253"}](https://uewhealth.com)
+
+### Data Engineer
+
+August 2024 - Present
+
+-   Assembles large, complex sets of data that meet business requirements within Snowflake.
+
+-   Identified, designed, implemented, and maintained internal processes and structures through open source tools such as Airflow, Superset, Budibase, etc...
+
+-   Worked with stakeholders and executives to support their data reporting and infrastructure needs.
+
+-   Built analytical tools to utilize the data pipeline and provide actionable insights into key business performance metrics.
+
+## Penn Foster Group / CareerStep {style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"}
+
+[![Penn Foster Group](pennfoster-group.png){width="336"}](https://www.pennfostergroup.com/)
+
+### Data Analyst (Tableau Admin) / Data Engineer
+
+January 2022 - August 2024
+
+-   Provided Administration for both Tableau Server and Tableau Cloud
+
+-   Took charge on Tableau projects including reworking existing dashboards, logic and generating new workbooks for both internal and external reporting to schools and corporations. All work was organized and and pushed through Jira and documented in Confluence.
+
+-   Migrated data sources and models from Snowflake to Databricks.
+
+-   Assisted in Data Modeling utilizing both Star Schemas within Snowflake and continued the Medallion Structure within Databricks.
+
+-   Created custom R packages for well-defined functions to help streamline data analysis within the company.
+
+-   Worked as a Lead Analyst for a team of Data Specialists providing mentorship and support at a technical and career level.
+
+-   Built Quality Assurance Dashboards to help maintain business processes and help point out potential issues.
+
+### Junior Data Analyst
+
+May 2021 - January 2022
+
+-   Turned Complex data into a visualized format within Tableau. Managed projects in Standardizing and streamlining reports.
+
+-   Analyzed and investigated potential data integrity issues through SQL on a Snowflake instance.
+
+-   Managed Users and Permissions within a Tableau Cloud instance.
+
+-   Utilized different Tableau Extensions to further capabilities and functionality within Tableau.
+
+-   Built Dashboard SVGtemplates using Inkscape to standardize and beautify dashboard creation.
+
+-   Utilized and trained Business Users on ‘Ask Data’ and it’s functionalities
+
+## Mothers Lounge {style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"}
+
+[![Mothers Lounge](ml.png){width="625"}](https://motherslounge.com)
+
+### Data Analyst
+
+February 2017 - May 2021
+
+-   Created Automated Analysis Tools in R/Shinyapps.io and Tableau for Managerial use.
+
+-   Utilized Predictive Algorithms to Track Sales Trends and Generate Forecasts for Product Turnover.
+
+-   Tracked both Domestic and International Shipments. Forecasted Estimated shipping times.
+
+-   Provided a Customer base analysis using Sales Information and Census Information.
+
+-   Managed half a dozen Facebook Ad Accounts and provided ad hoc reports on their progress.
+
+-   Helped generate financial reports for Accounts Payable and Accounts Receivable
+
+## Bucked Up / DAS Labs {style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"}
+
+[![Bucked Up](bk.png){width="275"}](https://buckedup.com)
+
+### Data Analyst - Part Time
+
+February 2017 - January 2020
+
+-   Analyzed shipping times through USPS, UPS, and Fedex.
+
+-   Generated Sales Forecasts and managed inventory levels based on Sales Predictions with Excel.
+
+-   Managed ambassador payouts on a monthly basis.
+
+# Education
+
+## Southern New Hampshire University {style="background-color: #454545; border-radius: 20px; padding: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"}
+
+[![Southern New Hampshire University](snhu.svg){width="362"}](https://snhu.edu)
+
+-   Master of Science \| 2018 - 2020
+
+    -   Major: Data Analytics
+
+## Brigham Young University {style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"}
+
+[![Brigham Young University](byu.svg){width="150"}](https://byu.edu)
+
+-   Bachelor of Applied Sciences \| 2015 - 2017
+
+    -   Major: Statistics & Applied Analytics
+
+    -   Minor: Business Management
+
+## Snow College {style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"}
+
+[![Snow College](snow.png){width="470"}](https://snow.edu)
+
+-   Associate of Science \| 2010 - 2015
+
+    -   Major: General Education

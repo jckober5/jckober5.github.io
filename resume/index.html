@@ -1,166 +1,406 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
     <script defer src="https://umami.koberstudio.com/script.js" data-website-id="7e93dfac-e32a-4730-864f-80c10af54ba5"></script>
-    <title>My Resume</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="pandoc" />
 
-<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script>
-    $(function(){
-        //animations for resume 
-        $("body").toggle(1).fadeIn(5000);
-        $(".logo").slideUp(1).toggle(5000)
+        <meta name="author" content="Joshua Kober - josh@koberstudio.com" />
+    
+    
+    <title>📑 Resume</title>
 
-        //show and hide sections
+        <script src="index_files/header-attrs-2.24/header-attrs.js"></script>
+        <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="index_files/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="index_files/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <script src="index_files/navigation-1.1/tabsets.js"></script>
+        <link href="index_files/downcute-0.1/downcute.css" rel="stylesheet" />
+        <link href="index_files/downcute-0.1/downcute_fonts_embed.css" rel="stylesheet" />
+        <link href="index_files/downcute-0.1/downcute_chaos.css" rel="stylesheet" />
+        <script src="index_files/downcute-0.1/downcute_styles.js"></script>
+        <script src="index_files/downcute-0.1/downcute.js"></script>
+        <script src="index_files/prism-1.22/prism.js"></script>
+        <script src="index_files/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+        <link href="index_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+        <script src="index_files/datatables-binding-0.13/datatables.js"></script>
+        <link href="index_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+        <link href="index_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+        <script src="index_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+        <link href="index_files/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+        <script src="index_files/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+    
+    
+    
+    
+    <!-- tabsets -->
+    <script>
+      $(document).ready(function () {
+	  window.buildTabsets("toc");
+      });
+      $(document).ready(function () {
+	  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+	      $(this).parent().toggleClass('nav-tabs-open')
+	  });
+      });
+    </script>
 
-    });
-</script>
+    <!-- code folding -->
+    
+    <!-- code download -->
+    
+    <!-- tabsets dropdown -->
 
-<link rel="stylesheet" href="resume.css">
+    <style type="text/css">
+      .tabset-dropdown > .nav-tabs {
+	  display: inline-table;
+	  max-height: 500px;
+	  min-height: 44px;
+	  overflow-y: auto;
+	  background: white;
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+	  content: "&#xe258;";
+	  border: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active {
+	  display: block;
+      }
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PLQ1V1C7E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      .tabset-dropdown > .nav-tabs > li.active a {
+  	  padding: 0 15px !important;
+      }
 
-  gtag('config', 'G-2PLQ1V1C7E');
-</script>
-<script async defer data-website-id="457e2313-f049-4b7d-83b9-bbf82263e0cb" src="http://192.168.1.123:3000/umami.js"></script>
-
+      .tabset-dropdown > .nav-tabs > li > a,
+      .tabset-dropdown > .nav-tabs > li > a:focus,
+      .tabset-dropdown > .nav-tabs > li > a:hover {
+	  border: none;
+	  display: inline-block;
+	  border-radius: 4px;
+	  background-color: transparent;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+	  display: block;
+	  float: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li {
+	  display: none;
+	  margin-left: 0 !important;
+      }
+    </style>
+    
 </head>
-<body>
-    <div class="topSection">
-        <h1 id="media" class="topSectionWords">
-            <img class="pic" src="profile.jpg" alt="Profile Pic" width="140"><b> Joshua Kober - josh@koberstudio.com</b>
-        </h1>
-        <h3 class="topSectionWords"><em>Data Engineer - Data Analyst - Tableau Developer - BI Consultant</em></h3> 
-        <h2 class="topSectionWordsNav">
-            <a href="https://www.linkedin.com/in/joshua-kober-778134117/"><button class="navigation">Linkedin</button></a>
-            <a href="https://public.tableau.com/app/profile/joshua.kober6896"><button class="navigation">Tableau Public</button></a>
-            <a href="https://github.com/jckober5"><button class="navigation">Github</button></a>
-            <a href="https://www.koberstudio.com"><button class="navigation">Portfolio</button></a>
-            <a href="https://www.koberstudio.com/resume"><button class="navigation">Resume</button></a>
-            <a href="mailto::josh@koberstudio.com"><button class="navigation">Email</button></a>
-        </h2>
-    </div>
-    <div class="tableElements">
-        <table class="styledTable">
-        </table>
-    </div>
-    <div class="firstBox">
-        <h2 class="section"><u>Skills</u></h2>
-                <ul>
-                    <li><b>Data Tools: </b>Excel - SQL - R/Shiny - Python - Tableau - Power BI - MetaBase - SuperSet</li>
-                    <li><b>Deployment Implementation / Cloud Platforms: </b>Docker / Docker Compose - AWS - Snowflake - Databricks</li>
-                    <li><b>Design Tools: </b>HTML / CSS - Canva - Gimp - Inkscape - Photoshop</li>
-                    <li><b>Statistical Methods: </b>A/B Testing - Survey Research - Regression Modeling - Decision Trees / Random Forests</li>
-                    <li><b>Project / Code Management: </b>JIRA - Confluence - Monday - Bitbucket - Github</li>
-                </ul>
-                <a href="https://www.koberstudio.com/"><p style="font-size: 10px;"><i>***View my Portfolio for Examples</i></p></a>
-    </div>
-    <div class="firstBox">
-        <img class="logo" src="pfgroup.jpg" class="floatingImages" width="50">
-        <img class="logo" src="carrus.jpg" class="floatingImages" width="50">
-        <img class="logo" src="motherslounge.jpg" class="floatingImages" width="50">
-        <img class="logo" src="buckedup.jpg" class="floatingImages" width="50">
-        <img class="logo" src="jive.png" class="floatingImages" width="50">
-        <img class="logo" src="provo.jpg" class="floatingImages" width="50">
-        <h2 class="section"><u>Job Experience</u></h2>
-        <h3 class="group"> Carrus / Penn Foster Group: </h3>
-            <h5 class="item"><em>Data Engineer / Tableau Admin</em> 2022-Current</h5>
-                <ul>
-                    <li>Provided Administration for both Tableau Server and Tableau Cloud</li>
-                    <li>Took charge on Tableau projects including reworking existing dashboards, logic and generating new workbooks for both internal and external reporting to schools and corporations.  All work was organized and and pushed through Jira and documented in Confluence.</li>
-                    <li>Assisted in Data Modeling utilizing both Star Schemas within Snowflake and continued the Medallion Structure within Databricks.</li>
-                    <li>Created custom R packages for well-defined functions to help streamline data analysis within the company.</li>
-                    <li>Worked as a Lead Analyst for a team of Data Specialists providing mentorship and support at a technical and career level.</li>
-                    <li>Built Quality Assurance Dashboards to help maintain business processes and help point out potential issues.</li>
-                    <li>Utilized TSC library in Python to automate Tableau User and Workbook licensing / archiving policies.</li>
-                </ul>
-            <h5 class="item"><em>Data Analyst</em> 2021-2022</h5>
-                <ul>
-                    <li>Turned Complex data into a visualized format within Tableau. Managed projects in Standardizing and streamlining reports.</li>
-                    <li>Analyzed and investigated potential data integrity issues through SQL on a Snowflake instance.</li>
-                    <li>Managed Users and Permissions within a Tableau Cloud instance.</li>
-                    <li>Utilized different Tableau Extensions to further capabilities and functionality within Tableau.</li>
-                    <li>Built Dashboard SVGtemplates using Inkscape to standardize and beautify dashboard creation.</li>
-                    <li>Utilized and trained Business Users on ‘Ask Data’ and it’s functionalities</li>
-                </ul>
-        <h3 class="group">Mothers Lounge: </h3>
-            <h5 class="item"><em>Data Analyst</em> 2018-2021</h5>
-                <ul>
-                    <li>Created Automated Analysis Tools in R/Shinyapps.io and Tableau for Managerial use.</li>
-                    <li>Utilized Predictive Algorithms to Track Sales Trends and Generate Forecasts for Product Turnover.</li>
-                    <li>Tracked both Domestic and International Shipments. Forecasted Estimated shipping times.</li>
-                    <li>Provided a Customer base analysis using Sales Information and Census Information.</li>
-                    <li>Managed half a dozen Facebook Ad Accounts and provided ad hoc reports on their progress.</li>
-                    <li>Helped generate financial reports for Accounts Payable and Accounts Receivable</li>
-                </ul>
-        <h3 class="group">Bucked Up: </h3>
-            <h5 class="item"><em>Part Time: Data Analyst</em> 2017-2020</h5>
-                <ul>
-                    <li>Analyzed shipping times through USPS, UPS, and Fedex.</li>
-                    <li>Generated Sales Forecasts and managed inventory levels based on Sales Predictions with Excel.</li>
-                    <li>Managed ambassador payouts on a monthly basis.</li>
-                </ul>
-        <h3 class="group">Jive: </h3>
-            <h5 class="item"><em>Internship</em> 2016-2017</h5>
-                <ul>
-                    <li>Received training on how to use Salesforce.</li>
-                    <li>Helped to organize and classify different customers in their specific industries. </li>
-                    <li>Did a deep analysis of their customer base for several different organizations within Jive.</li>
-                </ul>
-        <h3 class="group">Provo Parks & Recreation: </h3>
-            <h5 class="item"><em>Internship</em> 2015-2016</h5>
-                <ul>
-                    <li>Helped to organize and delegate tasks to get an understanding of the positive impacts of adult sports on the community.</li>
-                    <li>Created and distributed a survey through Qualtrics to the Provo community.</li>
-                    <li>Analyzed data gathered to discover the economic benefit people from outside of Provo bring to the Provo community because they participate in adult sports.</li>
-                </ul>
-        <a href="https://www.linkedin.com/in/joshua-kober-778134117/"><p style="font-size: 10px;"><i>***View my Linkedin</i></p></a>
-    </div>   
-    <div class="secondBox">
-        <img class="logo" src="snhu.png" class="floatingImages" width="50">
-        <img class="logo" src="byu.png" class="floatingImages" width="50">
-        <img class="logo" src="snowcollege.jpg" class="floatingImages" width="50">
-        <h2 class="section"><u>Education</u></h2>
-        <h3 class="group">Southern New Hampshire University: </h3>
-            <h5 class="item">Master of Science: <em>Data Analysis</em> 2018-2020</h5>
-        <h3 class="group">Brigham Young University: </h3>
-            <h5 class="item">Bachelor of Applied Sciences: <em>Statistics / Business Management</em> 2015-2017</h5>
-        <h3 class="group">Snow College: </h3>
-            <h5 class="item">Associate of Science: <em>General Education</em> 2010-2015</h5>
-        <a href="https://www.linkedin.com/in/joshua-kober-778134117/"><p style="font-size: 10px;"><i>***View my Linkedin</i></p></a>
-    </div>
-    <div class="bottomSection">
-        <h2 class="bottomSectionWords">
-            <a href="https://www.linkedin.com/in/joshua-kober-778134117/"><button class="bottomNavigation">Linkedin</button></a>
-            <a href="https://public.tableau.com/app/profile/joshua.kober6896"><button class="bottomNavigation">Tableau Public</button></a>
-            <a href="https://www.koberstudio.com"><button class="bottomNavigation">Portfolio</button></a>
-            <a href="https://github.com/jckober5"><button class="bottomNavigation">GitHub</button></a>
-            <a href="https://hub.docker.com/search?q=jckober5"><button class="bottomNavigation">Docker Hub</button></a>
-        </h2>
-        <h2 class="bottomSectionWords">
-            <a href="https://koberstudio.com/data_analyst_jobs/"><button class="bottomNavigation">Data Project: Data Analyst Job Postings</button></a>
-            <a href="https://koberstudio.com/california_births/"><button class="bottomNavigation">Data Project: California Births</button></a>
-            <a href="https://koberstudio.com/temples/"><button class="bottomNavigation">Data Project: Temples Across the USA</button></a>
-            <a href="https://koberstudio.com/provo_meal_tool/"><button class="bottomNavigation">Data Project: Provo Meal Input Tool</button></a>
-            <a href="https://koberstudio.com/nintendo_sales/"><button class="bottomNavigation">Data Project: Nintendo Video Game Sales</button></a>
-        </h2>
-        <h2 class="bottomSectionWords">
-                <a href="https://koberstudio.com/r_package_remove_outliers/"><button class="bottomNavigation">R Package: Remove Outliers</button></a>
-                <a href="https://koberstudio.com/data_table_extension/"><button class="bottomNavigation">Tableau Extension: Data Tables</button></a>
-        </h2>
-        <h2 class="bottomSectionWords">
-            <a href="https://www.koberstudio.com/about-me"><button class="bottomNavigation">About Me</button></a>
-            <a href="mailto:josh@koberstudio.com"><button class="bottomNavigation">Contact Me</button></a>
-        </h2>
-    </div>  
-</body>
 
+<body class="preload">
+
+   	
+               <!-- downcute start -->   
+   <div id="docute" class="Root theme-chaos">
+     <div class="Page layout-narrow">
+      <div class="Wrap">
+        <div class="Sidebar">
+          <div class="SidebarItems" id="toc">
+            <ul>
+            <li><a href="#skills" id="toc-skills">Skills</a></li>
+            <li><a href="#job-experience" id="toc-job-experience">Job
+            Experience</a>
+            <ul>
+            <li><a href="#united-energy-workers-healthcare"
+            id="toc-united-energy-workers-healthcare">United Energy
+            Workers Healthcare</a></li>
+            <li><a href="#penn-foster-group-careerstep"
+            id="toc-penn-foster-group-careerstep">Penn Foster Group /
+            CareerStep</a></li>
+            <li><a href="#mothers-lounge"
+            id="toc-mothers-lounge">Mothers Lounge</a></li>
+            <li><a href="#bucked-up-das-labs"
+            id="toc-bucked-up-das-labs">Bucked Up / DAS Labs</a></li>
+            </ul></li>
+            <li><a href="#education" id="toc-education">Education</a>
+            <ul>
+            <li><a href="#southern-new-hampshire-university"
+            id="toc-southern-new-hampshire-university">Southern New
+            Hampshire University</a></li>
+            <li><a href="#brigham-young-university"
+            id="toc-brigham-young-university">Brigham Young
+            University</a></li>
+            <li><a href="#snow-college" id="toc-snow-college">Snow
+            College</a></li>
+            </ul></li>
+            </ul>
+          </div>
+          <div data-position="sidebar:post-end" class="InjectedComponents"><div class="dark-theme-toggler"><div class="toggle checked"><div class="toggle-track"><div class="toggle-track-check"><img  src="data:image/png;base64,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" role="presentation" style="pointer-events: none;" width="16" height="16"></div> <div class="toggle-track-x"><img src="data:image/png;base64,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" role="presentation" style="pointer-events: none;" width="16" height="16"></div></div> <div class="toggle-thumb"></div></div> <input type="checkbox" aria-label="Switch between Dark and Default theme" class="toggler-screen-reader-only"></div></div>
+        </div>
+        <div class="Main">
+          <div class="Content" id="content"> 
+   
+   
+        
+      <h1 class="title">📑 Resume</h1>
+      
+      <p class="authors">
+           <span class="glyphicon glyphicon-user"></span> Joshua Kober -
+<a href="mailto:josh@koberstudio.com"
+class="email">josh@koberstudio.com</a>
+      </p>
+              
+
+   
+      
+   
+<!-- Don't indent these lines or it will mess pre blocks indentation --> 
+<div class="page-content has-page-title">
+<p><img src="images/personal.png" width="154" /></p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="17%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="center"><a
+href="https://www.linkedin.com/in/joshua-kober-778134117/">Linkedin</a></td>
+<td align="center"><a
+href="https://www.koberstudio.com/">Portfolio</a></td>
+<td align="center"><a href="https://github.com/jckober5">Github</a></td>
+<td align="center"><a href="https://www.koberstudio.com/about-me">About
+Me</a></td>
+<td align="center"><a href="mailto::josh@koberstudio.com">Contact
+Me</a></td>
+</tr>
+</tbody>
+</table>
+<div id="skills" class="section level1">
+<h1>Skills</h1>
+<div id="htmlwidget-f3c1aff27d47e0735a4d" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f3c1aff27d47e0735a4d">{"x":{"filter":"none","editable":{"target":"cell","disable":{"columns":null}},"data":[["ETL / ELT Processing","Programming","Business Intelligence &amp; Data Visualization ","App Development Tools","Cloud Technologies","Project / Code Management","Statistical Methods","Design Tools","Marketing Platform Management"],["Airflow - Airbyte","SQL - Python - R - HTML/CSS - Excel","Tableau - Power BI - Metabase - Superset","Budibase - Appsmith - Windmill - Shinyapps","AWS - Linode - Snowflake - Databricks - Cloudflare","Jira - Confluence - Monday - Bitbucket - Github - Gitea","A/B Testing - Survey Research - Regression - Decision Trees / Random Forests","Canva - Photoshop - Inkscape - Gimp - Mobirise","Email - Facebook/Instagram - Linkedin"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Skills<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="job-experience" class="section level1">
+<h1>Job Experience</h1>
+<div id="united-energy-workers-healthcare" class="section level2"
+style="background-color: #454545; border-radius: 20px; padding-top: -10px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<h2
+style="background-color: #454545; border-radius: 20px; padding-top: -10px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">United
+Energy Workers Healthcare</h2>
+<p><a href="https://uewhealth.com"><img src="UEW.png" width="253"
+alt="UEW Health" /></a></p>
+<div id="data-engineer" class="section level3">
+<h3>Data Engineer</h3>
+<p>August 2024 - Present</p>
+<ul>
+<li><p>Assembles large, complex sets of data that meet business
+requirements within Snowflake.</p></li>
+<li><p>Identified, designed, implemented, and maintained internal
+processes and structures through open source tools such as Airflow,
+Superset, Budibase, etc…</p></li>
+<li><p>Worked with stakeholders and executives to support their data
+reporting and infrastructure needs.</p></li>
+<li><p>Built analytical tools to utilize the data pipeline and provide
+actionable insights into key business performance metrics.</p></li>
+</ul>
+</div>
+</div>
+<div id="penn-foster-group-careerstep" class="section level2"
+style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<h2
+style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Penn
+Foster Group / CareerStep</h2>
+<p><a href="https://www.pennfostergroup.com/"><img
+src="pennfoster-group.png" width="336"
+alt="Penn Foster Group" /></a></p>
+<div id="data-analyst-tableau-admin-data-engineer"
+class="section level3">
+<h3>Data Analyst (Tableau Admin) / Data Engineer</h3>
+<p>January 2022 - August 2024</p>
+<ul>
+<li><p>Provided Administration for both Tableau Server and Tableau
+Cloud</p></li>
+<li><p>Took charge on Tableau projects including reworking existing
+dashboards, logic and generating new workbooks for both internal and
+external reporting to schools and corporations. All work was organized
+and and pushed through Jira and documented in Confluence.</p></li>
+<li><p>Migrated data sources and models from Snowflake to
+Databricks.</p></li>
+<li><p>Assisted in Data Modeling utilizing both Star Schemas within
+Snowflake and continued the Medallion Structure within
+Databricks.</p></li>
+<li><p>Created custom R packages for well-defined functions to help
+streamline data analysis within the company.</p></li>
+<li><p>Worked as a Lead Analyst for a team of Data Specialists providing
+mentorship and support at a technical and career level.</p></li>
+<li><p>Built Quality Assurance Dashboards to help maintain business
+processes and help point out potential issues.</p></li>
+</ul>
+</div>
+<div id="junior-data-analyst" class="section level3">
+<h3>Junior Data Analyst</h3>
+<p>May 2021 - January 2022</p>
+<ul>
+<li><p>Turned Complex data into a visualized format within Tableau.
+Managed projects in Standardizing and streamlining reports.</p></li>
+<li><p>Analyzed and investigated potential data integrity issues through
+SQL on a Snowflake instance.</p></li>
+<li><p>Managed Users and Permissions within a Tableau Cloud
+instance.</p></li>
+<li><p>Utilized different Tableau Extensions to further capabilities and
+functionality within Tableau.</p></li>
+<li><p>Built Dashboard SVGtemplates using Inkscape to standardize and
+beautify dashboard creation.</p></li>
+<li><p>Utilized and trained Business Users on ‘Ask Data’ and it’s
+functionalities</p></li>
+</ul>
+</div>
+</div>
+<div id="mothers-lounge" class="section level2"
+style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<h2
+style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Mothers
+Lounge</h2>
+<p><a href="https://motherslounge.com"><img src="ml.png" width="625"
+alt="Mothers Lounge" /></a></p>
+<div id="data-analyst" class="section level3">
+<h3>Data Analyst</h3>
+<p>February 2017 - May 2021</p>
+<ul>
+<li><p>Created Automated Analysis Tools in R/Shinyapps.io and Tableau
+for Managerial use.</p></li>
+<li><p>Utilized Predictive Algorithms to Track Sales Trends and Generate
+Forecasts for Product Turnover.</p></li>
+<li><p>Tracked both Domestic and International Shipments. Forecasted
+Estimated shipping times.</p></li>
+<li><p>Provided a Customer base analysis using Sales Information and
+Census Information.</p></li>
+<li><p>Managed half a dozen Facebook Ad Accounts and provided ad hoc
+reports on their progress.</p></li>
+<li><p>Helped generate financial reports for Accounts Payable and
+Accounts Receivable</p></li>
+</ul>
+</div>
+</div>
+<div id="bucked-up-das-labs" class="section level2"
+style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<h2
+style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Bucked
+Up / DAS Labs</h2>
+<p><a href="https://buckedup.com"><img src="bk.png" width="275"
+alt="Bucked Up" /></a></p>
+<div id="data-analyst---part-time" class="section level3">
+<h3>Data Analyst - Part Time</h3>
+<p>February 2017 - January 2020</p>
+<ul>
+<li><p>Analyzed shipping times through USPS, UPS, and Fedex.</p></li>
+<li><p>Generated Sales Forecasts and managed inventory levels based on
+Sales Predictions with Excel.</p></li>
+<li><p>Managed ambassador payouts on a monthly basis.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="education" class="section level1">
+<h1>Education</h1>
+<div id="southern-new-hampshire-university" class="section level2"
+style="background-color: #454545; border-radius: 20px; padding: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<h2
+style="background-color: #454545; border-radius: 20px; padding: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Southern
+New Hampshire University</h2>
+<p><a href="https://snhu.edu"><img src="snhu.svg" width="362"
+alt="Southern New Hampshire University" /></a></p>
+<ul>
+<li><p>Master of Science | 2018 - 2020</p>
+<ul>
+<li>Major: Data Analytics</li>
+</ul></li>
+</ul>
+</div>
+<div id="brigham-young-university" class="section level2"
+style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<h2
+style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Brigham
+Young University</h2>
+<p><a href="https://byu.edu"><img src="byu.svg" width="150"
+alt="Brigham Young University" /></a></p>
+<ul>
+<li><p>Bachelor of Applied Sciences | 2015 - 2017</p>
+<ul>
+<li><p>Major: Statistics &amp; Applied Analytics</p></li>
+<li><p>Minor: Business Management</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="snow-college" class="section level2"
+style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<h2
+style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Snow
+College</h2>
+<p><a href="https://snow.edu"><img src="snow.png" width="470"
+alt="Snow College" /></a></p>
+<ul>
+<li><p>Associate of Science | 2010 - 2015</p>
+<ul>
+<li>Major: General Education</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+   
+   
+              </div>
+  </div>
+  </div>
+  </div>
+   
+      
+
+  <script>
+    $(document).ready(function () {
+
+		// add bootstrap table styles to pandoc tables
+	$('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+		
+ 		
+	    });
+  </script>
+
+
+
+    <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+	document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+  
+</body>
 </html>
