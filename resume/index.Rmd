@@ -152,7 +152,7 @@ February 2017 - January 2020
 
 ## Brigham Young University {style="background-color: #454545; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"}
 
-[![Brigham Young University](byu.svg){width="150"}](https://byu.edu)
+[![Brigham Young University](byu.png){style="border-radius: 10px;" width="125"}](https://byu.edu)
 
 -   Bachelor of Applied Sciences \| 2015 - 2017
 
