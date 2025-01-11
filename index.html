@@ -184,6 +184,21 @@
 
 			gtag('config', 'G-2PLQ1V1C7E');
 			</script>
-			
+		<script>
+			const typebotInitScript = document.createElement("script");
+			typebotInitScript.type = "module";
+			typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.37/dist/web.js'
+
+			Typebot.initBubble({
+			typebot: "faq-fn7epe5",
+			apiHost: "http://10.0.0.247:8081",
+			theme: {
+				button: { backgroundColor: "#598E71", customIconSrc: "🤖", size: "large" },
+			},
+			});
+			`;
+			document.body.append(typebotInitScript);
+		</script>
+		
 	</body>
 </html>
