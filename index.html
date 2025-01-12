@@ -1,173 +1,337 @@
 <!DOCTYPE HTML>
 <!--
-	Directive by HTML5 UP
+	Halcyonic by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-	Modified and adjusted by Josh Kober
 -->
 <html>
 	<head>
-		<title>My Portfolio</title>
+		<link rel="icon" type="image/png" href="images/logo.png">
+		<title>Kober Studio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script defer src="https://umami.koberstudio.com/script.js" data-website-id="7e93dfac-e32a-4730-864f-80c10af54ba5"></script>
 	</head>
-	<body class="is-preload">
+	<body>
+		<div id="page-wrapper">
 
-		<!-- Header -->
-			<div id="header">
-				<!--
-				<div><a href="https://www.koberstudio.com/koberlytics" class="button" style="position: fixed; right: 15px; top: 15px; width: 100px;">Koberlytics Apps</a></div>
-				-->
-				<div class = "bottomlogo">
-					<img src="images/personal.png" width = "300" height = "375" alt="" />
-				</div>
-					<ul class="actions special">
-						<li><a href="https://www.linkedin.com/in/joshua-kober-778134117/" class="button">Linkedin</a></li>
-						<li><a href="https://www.koberstudio.com/resume" class="button">Resume</a></li>
-						<li><a href="https://public.tableau.com/app/profile/joshua.kober6896" class="button">Tableau Public</a></li>
-						<li><a href="https://github.com/jckober5" class="button">Github</a></li>
-						<li><a href="https://kobernetwork.ghost.io" class="button">Kober Network</a></li>
-					</ul>
-				<h1>Joshua Kober 
-					<br> Portfolio </h1>
-					<p>An Experieced Data Engineer and Analyst</p>
-			</div>
-
-		<!-- Main -->
-			<div id="main">
-
-				<header class="major container medium">
-					<h2>In this Portfolio we create projects
-					<br />
-					in Data Prep, Analysis, 
-					<br />
-					and Visualizations!</h2>
-
-				</header>
-				<div class="box alt container">
-					<section class="feature left">
-						<a href="https://koberstudio.com/data_analyst_jobs/" class="image icon solid fa-signal"><img src="images/data_analyst_postings.PNG" alt="" /></a>
-						<div class="content">
-							<h3>Data Analyst Jobs</h3>
-							<p>In this project we utilize Job Postings from Google to understand what skills, experience, and education is required to be hired and grow as a Data Analyst. </p>
-						</div>
-					</section>
-					<section class="feature right">
-						<a href="https://koberstudio.com/divide_music/" class="image icon solid fa-signal"><img src="images/divide_music.PNG" alt="" /></a>
-						<div class="content">
-							<h3>Divide Music</h3>
-							<p>In this project we explore and analyze one of my favorite artists on Youtube to discover how well their content is doing and whether we can expect growth for their channel. </p>
-						</div>
-					</section>
-					<section class="feature left">
-						<a href="https://koberstudio.com/temples/" class="image icon solid fa-signal"><img src="images/temples.PNG" alt="" /></a>
-						<div class="content">
-							<h3>Temples Across the USA</h3>
-							<p>In this project we use Python to webscrape Latter Day Saint Temple data to view current information on Temples in the USA.  </p>
-						</div>
-					</section>
-					<section class="feature right">
-						<a href="provo_meal_tool/" class="image icon solid fa-signal"><img src="images/provoMealTool.PNG" alt="" /></a>
-						<div class="content">
-							<h3>Provo Meal Input Tool</h3>
-							<p>In this project we create a Tool using R and Shiny to help gather data and show people the different places to eat near Provo Utah.  </p>
-						</div>
-					</section>
-				</div>
-
-				<header class="major container medium">
-					<h2>In this Portfolio we create projects
-					<br />
-					in R Package and Tableau Extension  
-					<br />
-					Development!</h2>
-				</header>
-
-				<div class="box alt container">
-					<section class="feature left">
-						<a href="https://koberstudio.com/r_package_remove_outliers/" class="image icon solid fa-code"><img src="images/RSession.PNG" alt="" /></a>
-						<div class="content">
-							<h3>Remove Potential Outliers</h3>
-							<p>R package created and used to help remove outliers from a data frame. An outlier is an observation that lies abnormally far away from other values in a dataset. Outliers can be problematic because they can affect the results of an analysis. </p>
-						</div>
-					</section>
-					<section class="feature right">
-						<a href="https://koberstudio.com/data_table_extension/" class="image icon solid fa-code"><img src="images/data_table_extension.PNG" alt="" /></a>
-						<div class="content">
-							<h3>Data Table Tableau Extension</h3>
-							<p>Tableau Extension built using R and Shiny to provide a Data Table Visualization to your Tableau Dashboards.</p>
-						</div>
-					</section>
-				</div>
-
-
-
-
-
-				<footer class="major container medium">
-					<h3>Get in Touch</h3>
-					<ul class="actions special">
-						<li><a href="https://www.linkedin.com/in/joshua-kober-778134117/" class="button">Linkedin</a></li>
-						<li><a href="https://public.tableau.com/app/profile/joshua.kober6896" class="button">Tableau Public</a></li>
-						<li><a href="mailto::josh@koberstudio.com" class="button">Email</a></li>
-					</ul>
-				</footer>
-
-			</div>
-
-		<!-- Footer -->
-			<div id="footer">
-				<div class="container medium">
-
-					<header class="major last">
-					</header>
-					<div class = "bottomlogo">
-						<img src="images/Logo.svg" width = "300" height = "300" alt="" />
-					</div>
-					<ul><a href="https://www.koberstudio.com/about-me" class="button">About Me</a></ul>
-						
-						
-
-					<!--
-					<form method="post" action="#">
+			<!-- Header -->
+				<section id="header">
+					<div class="container">
 						<div class="row">
-							<div class="col-6 col-12-mobilep">
-								<input type="text" name="name" placeholder="Name" />
-							</div>
-							<div class="col-6 col-12-mobilep">
-								<input type="email" name="email" placeholder="Email" />
-							</div>
 							<div class="col-12">
-								<textarea name="message" placeholder="Message" rows="6"></textarea>
-							</div>
-							<div class="col-12">
-								<ul class="actions special">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
+
+								<!-- Logo -->
+								<div style="display: flex; align-items: center;">
+									<img src="images/logo.png" alt="Logo" style="margin-right: 10px; height: 50px;">
+									<h1><a href="koberstudio.com" id="logo">Joshua Kober</a></h1>
+								</div>
+
+								<!-- Nav -->
+									<nav id="nav">
+										<a href="https://home.koberstudio.com/">Home Lab</a>
+										<a href="https://koberstudio.com/resume">Resume</a>
+										<!-- <a href="https://koberstudio.com/about-me">About Me</a> -->
+										<a href="https://github.com/jckober5">Github</a>
+										<a href="https://www.linkedin.com/in/joshua-kober-778134117/">Linkedin</a>
+									</nav>
+
 							</div>
 						</div>
-					</form>
-					-->
+					</div>
+					<div id="banner">
+						<div class="container">
+							<div class="row">
+								<div class="col-6 col-12-medium">
 
-					<!-- 
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-					</ul>
-					
+									<!-- Banner Copy -->
+										<p>A Strategic Data Engineer and Analytics Professional</p>
+										<a href="https://www.linkedin.com/in/joshua-kober-778134117/" class="button-large">Visit my Linkedin</a>
 
-					<ul class="copyright">
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+										<h3 style="padding-top: 5%; font-size: 24px;">
+											My name is Joshua Kober. With a Masters degree in Data Analytics, I have been helping organizations understand, organize, and visualize their data effectively for the last 10-15 years. I have always had the heart to serve and in this role I have done just that.  I've worked for organizations in the Online Retail, Education, and Healthcare industries.
+										</h3>
 
+										<h3 style="padding-top: 5%; font-size: 24px;">
+											I have extensive experience in data-centric programming languages including SQL, R, and Python. My proficiency extends to a wide range of visualization tools and software, such as Excel, Power BI, Metabase, Superset, and Tableau. My expertise also encompasses data orchestration and ETL/ELT tools like Airbyte and Airflow, as well as cloud data warehouses and analytics platforms such as Snowflake and Databricks. 
+											My passion for continuous learning drives me to constantly expand my skill set, enabling me to tackle complex data challenges and provide valuable insights to organizations.											
+										</h3>
+
+										<h3 style="padding-top: 5%; font-size: 24px;">
+											I possess advanced expertise in leveraging Docker containerization technology to efficiently deploy, manage, and scale open-source applications to help with data and business needs.  I'm well-versed in CRM systems including Salesforce, HubSpot, and open-source platforms. 
+										</h3>
+
+										<h3 style="padding-top: 5%; font-size: 24px;">
+											My passion for continuous learning drives me to constantly expand my skill set, enabling me to tackle complex data challenges and provide valuable insights to organizations.											
+										</h3>
+
+								</div>
+								<div class="col-6 col-12-medium imp-medium">
+
+									<!-- Banner Image -->
+									<a href="#" class="bordered-feature-image"><img src="images/couple.jpg" alt="" width="100" height=""></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Features -->
+				<section id="features">
+					<div class="container">
+						<div class="row">
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Project #1 -->
+									<section>
+										<a href="#" class="bordered-feature-image"><img src="images/project1.png" alt="" /></a>
+										<h2>Project: Website Analytics</h2>
+										<p>
+											By leveraging Umami's privacy-focused web analytics and Superset's powerful data visualization capabilities, I comprehensively track, analyze, and derive actionable insights into traffic patterns for Kober Studio. 
+											These open-source tools enable me to understand visitor behavior, monitor key performance metrics, and make data-driven decisions while maintaining robust user privacy standards.
+										</p>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Project #2 -->
+									<section>
+										<a href="#" class="bordered-feature-image"><img src="images/project2.png" alt="" /></a>
+										<h2>Project: Temples across the World</h2>
+										<p>
+											Leveraging Apache Airflow, I've developed a sophisticated web scraping pipeline to extract real-time data on the status of temples for The Church of Jesus Christ of Latter-day Saints. 
+											This automated system enables me to efficiently gather and process information, allowing for dynamic visualization of temples categorized by their current state: under construction, announced, or operational. 
+											The resulting insights provide a comprehensive overview of the Church's global temple network, facilitating informed analysis and strategic planning.
+										</p>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Project #3 -->
+									<section>
+										<a href="#" class="bordered-feature-image"><img src="images/project3.png" alt="" /></a>
+										<h2>Project: Youtube Analytics</h2>
+										<p>
+											By leveraging the YouTube Analytics API and Apache Airflow, I've developed a sophisticated data pipeline that enables comprehensive analysis of artists' YouTube performance. 
+											This automated system allows me to extract and compare key metrics such as channel growth, video performance, and audience engagement across multiple artists. 
+											Through detailed analytics, I can track real-time insights including total views, subscriber growth, and the trajectory of their most successful music videos, providing a nuanced understanding of their digital success and content strategy.
+										</p>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Project #4 -->
+									<section>
+										<a href="#" class="bordered-feature-image"><img src="images/project4.png" alt="" /></a>
+										<h2>Project: Data Job Postings</h2>
+										<p>
+											Leveraging the Google API and Apache Airflow, I've developed a sophisticated data pipeline to extract and analyze job postings within the data industry.
+											 This automated system enables me to gather real-time insights into market demands, required skill sets, and compensation trends across various data-related roles.
+											 By processing this information, I can provide a comprehensive overview of the current job market landscape, facilitating informed career decisions and identifying emerging trends in the data field
+										</p>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Content -->
+				<section id="content">
+					<div class="container">
+						<div class="row aln-center">
+							<div class="col-4 col-12-medium">
+
+								<!-- Box #1 -->
+								<section>
+									<header>
+										<h2>Career History</h2>
+										<h3>Where I have worked previously...</h3>
+									</header>
+									<ul class="quote-list">
+										<li>
+											<img src="images/UEW.png" alt="" style="width: 125px; height: 200;">
+											<p style="padding-left: 20%;">United Energy Workers Healthcare</p>
+											<span style="padding-left: 20%;">Data Engineer</span>
+										</li>
+										<li>
+											<img src="images/pennfostergroup_logo.jfif" alt="" style="width: 75px; height: 200;">
+											<p style="padding-left: 20%;">Penn Foster Group</p>
+											<span style="padding-left: 20%;">Data Analyst (Tableau Admin) / Data Engineer</span>
+										</li>
+										<li>
+											<img src="images/careerstep_logo.jfif" alt="" style="width: 75px; height: 200;">
+											<p style="padding-left: 20%;">Carrus / CareerStep</p>
+											<span style="padding-left: 20%;">Data Analyst</span>
+										</li>
+										<li>
+											<img src="images/motherslounge_logo.jfif" alt="" style="width: 75px; height: 200;">
+											<p style="padding-left: 20%;">Mothers Lounge</p>
+											<span style="padding-left: 20%;">Data Analyst</span>
+										</li>
+									</ul>
+								</section>
+
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+
+								<!-- Box #2 -->
+									<section>
+										<header>
+											<h2>What I Do</h2>
+											<h3>What I've provided for other organizations...</h3>
+										</header>
+										<ul class="check-list">
+											<li>ETL/ELT Pipelines</li>
+											<li>Programming</li>
+											<li>Business Intelligence & Data Analytics</li>
+											<li>Docker Containerization</li>
+											<li>Data Modeling</li>
+											<li>Project / Code Management</li>
+											<li>Design</li>
+											<li>App Development</li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+
+								<!-- Box #3 -->
+									<section>
+										<header>
+											<h2>Education</h2>
+											<h3>What Education Background I have...</h3>
+										</header>
+										<ul class="quote-list">
+											<li>
+												<img src="images/snhu.png" alt="" style="width: 75px; height: 200;">
+												<p>"M.S. Major: Data Analytics"</p>
+												<span>Southern New Hampshire University</span>
+											</li>
+											<li>
+												<img src="images/byu.png" alt="" style="width: 75px; height: 200;">
+												<p>"B.S. Major: Applied Statistics & Analytics"</p>
+												<span>Brigham Young University</span>
+											</li>
+											<li>
+												<img src="images/byu.png" alt="" style="width: 75px; height: 200;">
+												<p>"B.S. Minor: Business Management"</p>
+												<span>Brigham Young University</span>
+											</li>
+											<li>
+												<img src="images/snowcollege.jpg" alt="" style="width: 75px; height: 200;">
+												<p>"A.S. Major General Education"</p>
+												<span>Snow College</span>
+											</li>
+										</ul>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+				
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-8 col-12-medium">
+
+								<!-- Links -->
+									<section>
+										<div>
+											<div class="row">
+												<div class="col-3 col-12-small">
+													<h2>Platforms</h2>
+													<ul class="link-list last-child">
+														<li><a href="https://home.koberstudio.com/">Home Lab</a></li>
+														<li><a href="https://koberstudio.com/resume">Resume</a></li>
+														<li><a href="https://github.com/jckober5">Github</a></li>
+														<li><a href="https://www.linkedin.com/in/joshua-kober-778134117/">Linkedin</a></li>
+														<li><a href="https://superset.koberstudio.com/dashboard/list/?pageIndex=0&sortColumn=changed_on_delta_humanized&sortOrder=desc&viewMode=table">Superset</a></li>
+														<li><a href="https://public.tableau.com/app/profile/joshua.kober6896">Tableau Public</a></li>
+														<li><a href="mailto::josh@koberstudio.com">Email Me</a></li>
+													</ul>
+												</div>
+												<div class="col-3 col-12-small">
+													<h2>API's</h2>
+													<ul class="link-list last-child">
+														<li><a href="https://fastapi.koberstudio.com/docs">FastAPI Docs</a></li>
+													</ul>
+												</div>
+												<div class="col-3 col-12-small">
+													<h2>Dashboards</h2>
+													<ul class="link-list last-child">
+														<li><a href="https://superset.koberstudio.com/superset/dashboard/1/">Website Analytics</a></li>
+														<li><a href="https://public.tableau.com/app/profile/joshua.kober6896/viz/DivideMusic/DivideMusic">Divide Music</a></li>
+														<li><a href="https://public.tableau.com/app/profile/joshua.kober6896/viz/DataAnalystJobsGoogleJobPostings/DataAnalystJobs">Data Analyst Jobs</a></li>
+														<li><a href="https://public.tableau.com/app/profile/joshua.kober6896/viz/LatterDaySaintTemplesAcrosstheUSA/TemplesAcrosstheUSA">Temples Across the USA</a></li>
+														<li><a href="https://public.tableau.com/app/profile/joshua.kober6896/viz/ProvoMealToolSurvey/ProvoMealToolSurvey">Provo Meal Survey</a></li>
+														<li><a href="https://public.tableau.com/app/profile/joshua.kober6896/viz/TankTrailerCapacityCalculation/CaliforniaBirthsbyAgeGroup">Tank Trailer Capcity</a></li>
+													</ul>
+												</div>
+												<div class="col-3 col-12-small">
+													<h2>Applications / Forms</h2>
+													<ul class="link-list last-child">
+													</ul>
+												</div>
+											</div>
+										</div>
+									</section>
+
+							</div>
+							<div class="col-4 col-12-medium imp-medium">
+
+								<!-- Blurb -->
+									<section>
+										<h2>Who I Am...</h2>
+										<p>
+											I am a seasoned Data Analytics professional with a Master's degree and 10-15 years of experience across various industries, including Online Retail, Education, and Healthcare. 
+											My extensive expertise spans data-centric programming languages, visualization tools, ETL/ELT processes, cloud platforms, and CRM systems, complemented by a passion for continuous learning and tackling complex data challenges to provide valuable insights.
+										</p>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Copyright -->
+				<div id="copyright">
+					&copy; Design: <a href="http://html5up.net">HTML5 UP</a>
 				</div>
-			</div>
-		-->
+			<script>
+				//Chat Bot Default
+				const typebotInitScript = document.createElement("script");
+				typebotInitScript.type = "module";
+				typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.37/dist/web.js'
+
+				Typebot.initBubble({
+				typebot: "portfolio-typebot-7sc8kxe",
+				apiHost: "https://viewer.koberstudio.com",
+				theme: { button: { backgroundColor: "#4A8BB2" } },
+				});
+				`;
+				document.body.append(typebotInitScript);
+
+				// Contact Me Popup
+				// const typebotInitScript = document.createElement("script");
+				// typebotInitScript.type = "module";
+				// typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.37/dist/web.js'
+
+				// Typebot.initPopup({
+				// typebot: "contact-me-sxo9zox",
+				// apiHost: "https://viewer.koberstudio.com",
+				// autoShowDelay: 15000,
+				// });
+				// `;
+				// document.body.append(typebotInitScript);
+			</script>		
+		</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -175,28 +339,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<!-- Google tag (gtag.js) -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PLQ1V1C7E"></script>
-			<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
 
-			gtag('config', 'G-2PLQ1V1C7E');
-			</script>
-		<script>
-			const typebotInitScript = document.createElement("script");
-			typebotInitScript.type = "module";
-			typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.37/dist/web.js'
-
-			Typebot.initBubble({
-			typebot: "faq-7gpp7z3",
-			apiHost: "https://viewer.koberstudio.com",
-			theme: { button: { backgroundColor: "#0042DA" } },
-			});
-			`;
-			document.body.append(typebotInitScript);
-		</script>
-		
 	</body>
 </html>
