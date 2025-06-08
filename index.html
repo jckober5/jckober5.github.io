@@ -31,7 +31,7 @@
 								<!-- Nav -->
 									<nav id="nav">
 										<a href="https://home.koberstudio.com/">Home Lab</a>
-										<a href="https://koberstudio.com/resume">Resume</a>
+										<!-- <a href="https://koberstudio.com/resume">Resume</a> -->
 										<!-- <a href="https://koberstudio.com/about-me">About Me</a> -->
 										<a href="https://github.com/jckober5">Github</a>
 										<a href="https://www.linkedin.com/in/joshua-kober-778134117/">Linkedin</a>
@@ -89,7 +89,7 @@
 										<a href="#" class="bordered-feature-image"><img src="images/project1.png" alt="" /></a>
 										<h2>Project: Website Analytics</h2>
 										<p>
-											By leveraging Umami's privacy-focused web analytics and Superset's powerful data visualization capabilities, I comprehensively track, analyze, and derive actionable insights into traffic patterns for Kober Studio. 
+											By leveraging Umami's privacy-focused web analytics and Superset's powerful data visualization capabilities, I comprehensively track, analyze, and derive actionable insights into traffic patterns for my own Website and Portfolio (Kober Studio). 
 											These open-source tools enable me to understand visitor behavior, monitor key performance metrics, and make data-driven decisions while maintaining robust user privacy standards.
 										</p>
 									</section>
@@ -162,7 +162,7 @@
 										<li>
 											<img src="images/pennfostergroup_logo.jfif" alt="" style="width: 75px; height: 200;">
 											<p style="padding-left: 20%;">Penn Foster Group</p>
-											<span style="padding-left: 20%;">Data Analyst (Tableau Admin) / Data Engineer</span>
+											<span style="padding-left: 20%;">Lead Data Analyst (Tableau Admin)</span>
 										</li>
 										<li>
 											<img src="images/careerstep_logo.jfif" alt="" style="width: 75px; height: 200;">
@@ -250,7 +250,7 @@
 													<h2>Platforms</h2>
 													<ul class="link-list last-child">
 														<li><a href="https://home.koberstudio.com/">Home Lab</a></li>
-														<li><a href="https://koberstudio.com/resume">Resume</a></li>
+														<!-- <li><a href="https://koberstudio.com/resume">Resume</a></li> -->
 														<li><a href="https://github.com/jckober5">Github</a></li>
 														<li><a href="https://www.linkedin.com/in/joshua-kober-778134117/">Linkedin</a></li>
 														<li><a href="https://superset.koberstudio.com/dashboard/list/?pageIndex=0&sortColumn=changed_on_delta_humanized&sortOrder=desc&viewMode=table">Superset</a></li>
@@ -307,12 +307,24 @@
 				</div>
 			<script>
 				//Chat Bot Default
+				// const typebotInitScript = document.createElement("script");
+				// typebotInitScript.type = "module";
+				// typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.37/dist/web.js'
+
+				// Typebot.initBubble({
+				// typebot: "portfolio-typebot-7sc8kxe",
+				// apiHost: "https://viewer.koberstudio.com",
+				// theme: { button: { backgroundColor: "#4A8BB2" } },
+				// });
+				// `;
+				// document.body.append(typebotInitScript);
+
 				const typebotInitScript = document.createElement("script");
 				typebotInitScript.type = "module";
 				typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.37/dist/web.js'
 
 				Typebot.initBubble({
-				typebot: "portfolio-typebot-7sc8kxe",
+				typebot: "basic-chat-gpt-uerc9rm",
 				apiHost: "https://viewer.koberstudio.com",
 				theme: { button: { backgroundColor: "#4A8BB2" } },
 				});
